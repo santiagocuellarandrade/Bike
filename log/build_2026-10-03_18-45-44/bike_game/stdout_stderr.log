@@ -1,0 +1,23 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/bike_game.dir/src/bike_game.cpp.o[0m
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:137:28:[m[K [01;35m[Kwarning: [m[Kinteger constant is too large for its type
+  137 | constexpr int START_AMMO = [01;35m[K5000000000000000000000000000000000000000000000000[m[K;            // balas al empezar
+      |                            [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:137:28:[m[K [01;35m[Kwarning: [m[Koverflow in conversion from ‘[01m[Klong int[m[K’ to ‘[01m[Kint[m[K’ changes value from ‘[01m[K8954563434096099328[m[K’ to ‘[01m[K0[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Woverflow-Woverflow]8;;[m[K]
+[100%] [32m[1mLinking CXX executable bike_game[0m
+[100%] Built target bike_game
+-- Install configuration: ""
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/lib/bike_game/bike_game
+-- Set non-toolchain portion of runtime path of "/home/cuellarmaster/Bike/install/bike_game/lib/bike_game/bike_game" to ""
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/ament_index/resource_index/package_run_dependencies/bike_game
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/ament_index/resource_index/parent_prefix_path/bike_game
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/environment/path.dsv
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/local_setup.bash
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/local_setup.sh
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/local_setup.zsh
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/local_setup.dsv
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/package.dsv
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/ament_index/resource_index/packages/bike_game
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/cmake/bike_gameConfig.cmake
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/cmake/bike_gameConfig-version.cmake
+-- Up-to-date: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/package.xml

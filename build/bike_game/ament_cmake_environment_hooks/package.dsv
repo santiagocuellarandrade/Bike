@@ -1,0 +1,4 @@
+source;share/bike_game/local_setup.bash
+source;share/bike_game/local_setup.dsv
+source;share/bike_game/local_setup.sh
+source;share/bike_game/local_setup.zsh

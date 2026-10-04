@@ -1,0 +1,50 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.6 (/home/cuellarmaster/ros2_jazzy/install/ament_cmake/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found rclcpp: 28.1.21 (/home/cuellarmaster/ros2_jazzy/install/rclcpp/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 4.6.9 (/home/cuellarmaster/ros2_jazzy/install/rosidl_generator_c/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.9 (/home/cuellarmaster/ros2_jazzy/install/rosidl_generator_cpp/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/home/cuellarmaster/ros2_jazzy/install/rmw_implementation_cmake/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.4 (/home/cuellarmaster/ros2_jazzy/install/rmw_fastrtps_cpp/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /home/cuellarmaster/ros2_jazzy/install/fastrtps/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found std_msgs: 5.3.8 (/home/cuellarmaster/ros2_jazzy/install/std_msgs/share/std_msgs/cmake)
+-- Found geometry_msgs: 5.3.8 (/home/cuellarmaster/ros2_jazzy/install/geometry_msgs/share/geometry_msgs/cmake)
+-- Configuring done (8.0s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/cuellarmaster/Bike/build/bike_game
+[ 50%] [32mBuilding CXX object CMakeFiles/bike_game.dir/src/bike_game.cpp.o[0m
+[100%] [32m[1mLinking CXX executable bike_game[0m
+[100%] Built target bike_game
+-- Install configuration: ""
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/lib/bike_game/bike_game
+-- Set non-toolchain portion of runtime path of "/home/cuellarmaster/Bike/install/bike_game/lib/bike_game/bike_game" to ""
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/ament_index/resource_index/package_run_dependencies/bike_game
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/ament_index/resource_index/parent_prefix_path/bike_game
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/environment/ament_prefix_path.sh
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/environment/ament_prefix_path.dsv
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/environment/path.sh
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/environment/path.dsv
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/local_setup.bash
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/local_setup.sh
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/local_setup.zsh
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/local_setup.dsv
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/package.dsv
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/ament_index/resource_index/packages/bike_game
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/cmake/bike_gameConfig.cmake
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/cmake/bike_gameConfig-version.cmake
+-- Installing: /home/cuellarmaster/Bike/install/bike_game/share/bike_game/package.xml

@@ -1,0 +1,10 @@
+/home/cuellarmaster/Bike/build/bike_game/CMakeFiles/uninstall.dir
+/home/cuellarmaster/Bike/build/bike_game/CMakeFiles/bike_game_uninstall.dir
+/home/cuellarmaster/Bike/build/bike_game/CMakeFiles/bike_game.dir
+/home/cuellarmaster/Bike/build/bike_game/CMakeFiles/test.dir
+/home/cuellarmaster/Bike/build/bike_game/CMakeFiles/edit_cache.dir
+/home/cuellarmaster/Bike/build/bike_game/CMakeFiles/rebuild_cache.dir
+/home/cuellarmaster/Bike/build/bike_game/CMakeFiles/list_install_components.dir
+/home/cuellarmaster/Bike/build/bike_game/CMakeFiles/install.dir
+/home/cuellarmaster/Bike/build/bike_game/CMakeFiles/install/local.dir
+/home/cuellarmaster/Bike/build/bike_game/CMakeFiles/install/strip.dir

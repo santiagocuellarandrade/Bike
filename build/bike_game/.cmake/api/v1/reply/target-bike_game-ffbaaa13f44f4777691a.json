@@ -1,0 +1,1285 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "bike_game"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"install",
+			"target_link_libraries",
+			"ament_target_dependencies",
+			"set_target_properties",
+			"include",
+			"find_package",
+			"add_compile_options",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"CMakeLists.txt",
+			"/home/cuellarmaster/ros2_jazzy/install/ament_cmake_target_dependencies/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rclcpp/share/rclcpp/cmake/rclcppExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rclcpp/share/rclcpp/cmake/ament_cmake_export_targets-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rclcpp/share/rclcpp/cmake/rclcppConfig.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl/share/rcl/cmake/rclExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl/share/rcl/cmake/ament_cmake_export_targets-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl/share/rcl/cmake/rclConfig.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/libstatistics_collector/share/libstatistics_collector/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/libstatistics_collector/share/libstatistics_collector/cmake/libstatistics_collectorConfig.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rclcpp/share/rclcpp/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/share/rcl_interfaces/cmake/export_rcl_interfaces__rosidl_typesupport_fastrtps_cExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/share/rcl_interfaces/cmake/ament_cmake_export_targets-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/share/rcl_interfaces/cmake/rcl_interfacesConfig.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl/share/rcl/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_introspection_cExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_introspection_cppExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/share/rcl_interfaces/cmake/export_rcl_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_cppExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/share/rcl_interfaces/cmake/rcl_interfaces__rosidl_typesupport_cExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/share/rcl_interfaces/cmake/export_rcl_interfaces__rosidl_generator_cExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/tracetools/share/tracetools/cmake/tracetools_exportExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/tracetools/share/tracetools/cmake/ament_cmake_export_targets-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/tracetools/share/tracetools/cmake/tracetoolsConfig.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/std_msgs/share/std_msgs/cmake/export_std_msgs__rosidl_typesupport_fastrtps_cExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/std_msgs/share/std_msgs/cmake/ament_cmake_export_targets-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/std_msgs/share/std_msgs/cmake/std_msgsConfig.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/std_msgs/share/std_msgs/cmake/std_msgs__rosidl_typesupport_introspection_cppExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/std_msgs/share/std_msgs/cmake/std_msgs__rosidl_typesupport_introspection_cExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_cpp/share/rosidl_typesupport_cpp/cmake/rosidl_typesupport_cppExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_cpp/share/rosidl_typesupport_cpp/cmake/ament_cmake_export_targets-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_cpp/share/rosidl_typesupport_cpp/cmake/rosidl_typesupport_cppConfig.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/share/builtin_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/share/builtin_interfaces/cmake/builtin_interfacesConfig.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcutils/share/rcutils/cmake/rcutilsExport.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcutils/share/rcutils/cmake/ament_cmake_export_targets-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rcutils/share/rcutils/cmake/rcutilsConfig.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rosidl_runtime_c/share/rosidl_runtime_c/cmake/ament_cmake_export_dependencies-extras.cmake",
+			"/home/cuellarmaster/ros2_jazzy/install/rosidl_runtime_c/share/rosidl_runtime_c/cmake/rosidl_runtime_cConfig.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 15,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 20,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 17,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
+				"line" : 18,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 146,
+				"parent" : 4
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"file" : 4,
+				"parent" : 6
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 41,
+				"parent" : 7
+			},
+			{
+				"file" : 3,
+				"parent" : 8
+			},
+			{
+				"command" : 5,
+				"file" : 3,
+				"line" : 9,
+				"parent" : 9
+			},
+			{
+				"file" : 2,
+				"parent" : 10
+			},
+			{
+				"command" : 4,
+				"file" : 2,
+				"line" : 61,
+				"parent" : 11
+			},
+			{
+				"command" : 5,
+				"file" : 4,
+				"line" : 41,
+				"parent" : 7
+			},
+			{
+				"file" : 10,
+				"parent" : 13
+			},
+			{
+				"command" : 6,
+				"file" : 10,
+				"line" : 21,
+				"parent" : 14
+			},
+			{
+				"file" : 9,
+				"parent" : 15
+			},
+			{
+				"command" : 5,
+				"file" : 9,
+				"line" : 41,
+				"parent" : 16
+			},
+			{
+				"file" : 8,
+				"parent" : 17
+			},
+			{
+				"command" : 6,
+				"file" : 8,
+				"line" : 21,
+				"parent" : 18
+			},
+			{
+				"file" : 7,
+				"parent" : 19
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 41,
+				"parent" : 20
+			},
+			{
+				"file" : 6,
+				"parent" : 21
+			},
+			{
+				"command" : 5,
+				"file" : 6,
+				"line" : 9,
+				"parent" : 22
+			},
+			{
+				"file" : 5,
+				"parent" : 23
+			},
+			{
+				"command" : 4,
+				"file" : 5,
+				"line" : 61,
+				"parent" : 24
+			},
+			{
+				"command" : 5,
+				"file" : 7,
+				"line" : 41,
+				"parent" : 20
+			},
+			{
+				"file" : 14,
+				"parent" : 26
+			},
+			{
+				"command" : 6,
+				"file" : 14,
+				"line" : 21,
+				"parent" : 27
+			},
+			{
+				"file" : 13,
+				"parent" : 28
+			},
+			{
+				"command" : 5,
+				"file" : 13,
+				"line" : 41,
+				"parent" : 29
+			},
+			{
+				"file" : 12,
+				"parent" : 30
+			},
+			{
+				"command" : 5,
+				"file" : 12,
+				"line" : 9,
+				"parent" : 31
+			},
+			{
+				"file" : 11,
+				"parent" : 32
+			},
+			{
+				"command" : 4,
+				"file" : 11,
+				"line" : 61,
+				"parent" : 33
+			},
+			{
+				"command" : 5,
+				"file" : 12,
+				"line" : 9,
+				"parent" : 31
+			},
+			{
+				"file" : 15,
+				"parent" : 35
+			},
+			{
+				"command" : 4,
+				"file" : 15,
+				"line" : 61,
+				"parent" : 36
+			},
+			{
+				"command" : 5,
+				"file" : 12,
+				"line" : 9,
+				"parent" : 31
+			},
+			{
+				"file" : 16,
+				"parent" : 38
+			},
+			{
+				"command" : 4,
+				"file" : 16,
+				"line" : 61,
+				"parent" : 39
+			},
+			{
+				"command" : 5,
+				"file" : 12,
+				"line" : 9,
+				"parent" : 31
+			},
+			{
+				"file" : 17,
+				"parent" : 41
+			},
+			{
+				"command" : 4,
+				"file" : 17,
+				"line" : 61,
+				"parent" : 42
+			},
+			{
+				"command" : 5,
+				"file" : 12,
+				"line" : 9,
+				"parent" : 31
+			},
+			{
+				"file" : 18,
+				"parent" : 44
+			},
+			{
+				"command" : 4,
+				"file" : 18,
+				"line" : 61,
+				"parent" : 45
+			},
+			{
+				"command" : 5,
+				"file" : 12,
+				"line" : 9,
+				"parent" : 31
+			},
+			{
+				"file" : 19,
+				"parent" : 47
+			},
+			{
+				"command" : 4,
+				"file" : 19,
+				"line" : 61,
+				"parent" : 48
+			},
+			{
+				"command" : 5,
+				"file" : 12,
+				"line" : 9,
+				"parent" : 31
+			},
+			{
+				"file" : 20,
+				"parent" : 50
+			},
+			{
+				"command" : 4,
+				"file" : 20,
+				"line" : 61,
+				"parent" : 51
+			},
+			{
+				"command" : 6,
+				"file" : 10,
+				"line" : 21,
+				"parent" : 14
+			},
+			{
+				"file" : 23,
+				"parent" : 53
+			},
+			{
+				"command" : 5,
+				"file" : 23,
+				"line" : 41,
+				"parent" : 54
+			},
+			{
+				"file" : 22,
+				"parent" : 55
+			},
+			{
+				"command" : 5,
+				"file" : 22,
+				"line" : 9,
+				"parent" : 56
+			},
+			{
+				"file" : 21,
+				"parent" : 57
+			},
+			{
+				"command" : 4,
+				"file" : 21,
+				"line" : 61,
+				"parent" : 58
+			},
+			{
+				"command" : 6,
+				"file" : 0,
+				"line" : 11,
+				"parent" : 0
+			},
+			{
+				"file" : 26,
+				"parent" : 60
+			},
+			{
+				"command" : 5,
+				"file" : 26,
+				"line" : 41,
+				"parent" : 61
+			},
+			{
+				"file" : 25,
+				"parent" : 62
+			},
+			{
+				"command" : 5,
+				"file" : 25,
+				"line" : 9,
+				"parent" : 63
+			},
+			{
+				"file" : 24,
+				"parent" : 64
+			},
+			{
+				"command" : 4,
+				"file" : 24,
+				"line" : 61,
+				"parent" : 65
+			},
+			{
+				"command" : 5,
+				"file" : 25,
+				"line" : 9,
+				"parent" : 63
+			},
+			{
+				"file" : 27,
+				"parent" : 67
+			},
+			{
+				"command" : 4,
+				"file" : 27,
+				"line" : 61,
+				"parent" : 68
+			},
+			{
+				"command" : 5,
+				"file" : 25,
+				"line" : 9,
+				"parent" : 63
+			},
+			{
+				"file" : 28,
+				"parent" : 70
+			},
+			{
+				"command" : 4,
+				"file" : 28,
+				"line" : 61,
+				"parent" : 71
+			},
+			{
+				"command" : 6,
+				"file" : 10,
+				"line" : 21,
+				"parent" : 14
+			},
+			{
+				"file" : 33,
+				"parent" : 73
+			},
+			{
+				"command" : 5,
+				"file" : 33,
+				"line" : 41,
+				"parent" : 74
+			},
+			{
+				"file" : 32,
+				"parent" : 75
+			},
+			{
+				"command" : 6,
+				"file" : 32,
+				"line" : 21,
+				"parent" : 76
+			},
+			{
+				"file" : 31,
+				"parent" : 77
+			},
+			{
+				"command" : 5,
+				"file" : 31,
+				"line" : 41,
+				"parent" : 78
+			},
+			{
+				"file" : 30,
+				"parent" : 79
+			},
+			{
+				"command" : 5,
+				"file" : 30,
+				"line" : 9,
+				"parent" : 80
+			},
+			{
+				"file" : 29,
+				"parent" : 81
+			},
+			{
+				"command" : 4,
+				"file" : 29,
+				"line" : 61,
+				"parent" : 82
+			},
+			{
+				"command" : 6,
+				"file" : 32,
+				"line" : 21,
+				"parent" : 76
+			},
+			{
+				"file" : 38,
+				"parent" : 84
+			},
+			{
+				"command" : 5,
+				"file" : 38,
+				"line" : 41,
+				"parent" : 85
+			},
+			{
+				"file" : 37,
+				"parent" : 86
+			},
+			{
+				"command" : 6,
+				"file" : 37,
+				"line" : 21,
+				"parent" : 87
+			},
+			{
+				"file" : 36,
+				"parent" : 88
+			},
+			{
+				"command" : 5,
+				"file" : 36,
+				"line" : 41,
+				"parent" : 89
+			},
+			{
+				"file" : 35,
+				"parent" : 90
+			},
+			{
+				"command" : 5,
+				"file" : 35,
+				"line" : 9,
+				"parent" : 91
+			},
+			{
+				"file" : 34,
+				"parent" : 92
+			},
+			{
+				"command" : 4,
+				"file" : 34,
+				"line" : 61,
+				"parent" : 93
+			},
+			{
+				"command" : 7,
+				"file" : 0,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 0,
+				"line" : 16,
+				"parent" : 0
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 142,
+				"parent" : 4
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-std=gnu++17"
+				},
+				{
+					"backtrace" : 95,
+					"fragment" : "-Wall"
+				},
+				{
+					"backtrace" : 95,
+					"fragment" : "-Wextra"
+				},
+				{
+					"backtrace" : 95,
+					"fragment" : "-Wpedantic"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 5,
+					"define" : "DEFAULT_RMW_IMPLEMENTATION=rmw_fastrtps_cpp"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "FASTCDR_DYN_LINK"
+				},
+				{
+					"backtrace" : 5,
+					"define" : "RCUTILS_ENABLE_FAULT_INJECTION"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 96,
+					"isSystem" : true,
+					"path" : "/usr/include/SDL2"
+				},
+				{
+					"backtrace" : 97,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/geometry_msgs/include/geometry_msgs"
+				},
+				{
+					"backtrace" : 97,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/std_msgs/include/std_msgs"
+				},
+				{
+					"backtrace" : 97,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rclcpp/include/rclcpp"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/include/builtin_interfaces"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_runtime_c/include/rosidl_runtime_c"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rcutils/include/rcutils"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_interface/include/rosidl_typesupport_interface"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/fastcdr/include"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_runtime_cpp/include/rosidl_runtime_cpp"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_fastrtps_cpp/include/rosidl_typesupport_fastrtps_cpp"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rmw/include/rmw"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_dynamic_typesupport/include/rosidl_dynamic_typesupport"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_fastrtps_c/include/rosidl_typesupport_fastrtps_c"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_introspection_c/include/rosidl_typesupport_introspection_c"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_introspection_cpp/include/rosidl_typesupport_introspection_cpp"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/libstatistics_collector/include/libstatistics_collector"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rcl/include/rcl"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/include/rcl_interfaces"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/service_msgs/include/service_msgs"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rcl_logging_interface/include/rcl_logging_interface"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rcl_yaml_param_parser/include/rcl_yaml_param_parser"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/type_description_interfaces/include/type_description_interfaces"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rcpputils/include/rcpputils"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/statistics_msgs/include/statistics_msgs"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rosgraph_msgs/include/rosgraph_msgs"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_cpp/include/rosidl_typesupport_cpp"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_c/include/rosidl_typesupport_c"
+				},
+				{
+					"backtrace" : 5,
+					"isSystem" : true,
+					"path" : "/home/cuellarmaster/ros2_jazzy/install/tracetools/include/tracetools"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					5
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"id" : "bike_game::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib/bike_game"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/home/cuellarmaster/Bike/install/bike_game"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/cuellarmaster/ros2_jazzy/install/rclcpp/lib:/home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib:/home/cuellarmaster/ros2_jazzy/install/libstatistics_collector/lib:/home/cuellarmaster/ros2_jazzy/install/rcl/lib:/home/cuellarmaster/ros2_jazzy/install/rmw_implementation/lib:/home/cuellarmaster/ros2_jazzy/install/type_description_interfaces/lib:/home/cuellarmaster/ros2_jazzy/install/rcl_yaml_param_parser/lib:/home/cuellarmaster/ros2_jazzy/install/rosgraph_msgs/lib:/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/lib:/home/cuellarmaster/ros2_jazzy/install/service_msgs/lib:/home/cuellarmaster/ros2_jazzy/install/statistics_msgs/lib:/home/cuellarmaster/ros2_jazzy/install/tracetools/lib:/home/cuellarmaster/ros2_jazzy/install/rcl_logging_interface/lib:/home/cuellarmaster/ros2_jazzy/install/ament_index_cpp/lib:/home/cuellarmaster/ros2_jazzy/install/std_msgs/lib:/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/lib:/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_fastrtps_c/lib:/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_introspection_cpp/lib:/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_introspection_c/lib:/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_fastrtps_cpp/lib:/home/cuellarmaster/ros2_jazzy/install/rmw/lib:/home/cuellarmaster/ros2_jazzy/install/rosidl_dynamic_typesupport/lib:/home/cuellarmaster/ros2_jazzy/install/fastcdr/lib:/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_cpp/lib:/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_c/lib:/home/cuellarmaster/ros2_jazzy/install/rcpputils/lib:/home/cuellarmaster/ros2_jazzy/install/rosidl_runtime_c/lib:/home/cuellarmaster/ros2_jazzy/install/rcutils/lib:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "/usr/lib/x86_64-linux-gnu/libSDL2.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rclcpp/lib/librclcpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_msgs__rosidl_typesupport_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_msgs__rosidl_generator_py.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/libstatistics_collector/lib/liblibstatistics_collector.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcl/lib/librcl.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 25,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rmw_implementation/lib/librmw_implementation.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 25,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/type_description_interfaces/lib/libtype_description_interfaces__rosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 25,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/type_description_interfaces/lib/libtype_description_interfaces__rosidl_typesupport_introspection_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 25,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/type_description_interfaces/lib/libtype_description_interfaces__rosidl_typesupport_introspection_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 25,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/type_description_interfaces/lib/libtype_description_interfaces__rosidl_typesupport_fastrtps_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 25,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/type_description_interfaces/lib/libtype_description_interfaces__rosidl_typesupport_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 25,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/type_description_interfaces/lib/libtype_description_interfaces__rosidl_generator_py.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 25,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/type_description_interfaces/lib/libtype_description_interfaces__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 25,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/type_description_interfaces/lib/libtype_description_interfaces__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcl_yaml_param_parser/lib/librcl_yaml_param_parser.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_introspection_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_introspection_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosgraph_msgs/lib/librosgraph_msgs__rosidl_generator_py.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/lib/librcl_interfaces__rosidl_typesupport_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/lib/librcl_interfaces__rosidl_generator_py.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosgraph_msgs/lib/librosgraph_msgs__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/lib/librcl_interfaces__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosgraph_msgs/lib/librosgraph_msgs__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcl_interfaces/lib/librcl_interfaces__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 34,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/service_msgs/lib/libservice_msgs__rosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 37,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/service_msgs/lib/libservice_msgs__rosidl_typesupport_introspection_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 40,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/service_msgs/lib/libservice_msgs__rosidl_typesupport_introspection_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 43,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/service_msgs/lib/libservice_msgs__rosidl_typesupport_fastrtps_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 46,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/service_msgs/lib/libservice_msgs__rosidl_typesupport_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 49,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/service_msgs/lib/libservice_msgs__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 52,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/service_msgs/lib/libservice_msgs__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_fastrtps_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_introspection_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_introspection_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/statistics_msgs/lib/libstatistics_msgs__rosidl_generator_py.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/statistics_msgs/lib/libstatistics_msgs__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/statistics_msgs/lib/libstatistics_msgs__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/tracetools/lib/libtracetools.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 59,
+				"fragment" : "-llttng-ust",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 59,
+				"fragment" : "-llttng-ust-common",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 59,
+				"fragment" : "-rdynamic",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 59,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 25,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcl_logging_interface/lib/librcl_logging_interface.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/std_msgs/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/std_msgs/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/std_msgs/lib/libstd_msgs__rosidl_typesupport_introspection_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/std_msgs/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/std_msgs/lib/libstd_msgs__rosidl_typesupport_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/std_msgs/lib/libstd_msgs__rosidl_generator_py.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_msgs__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/std_msgs/lib/libstd_msgs__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_msgs__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 5,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/std_msgs/lib/libstd_msgs__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 66,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_fastrtps_c/lib/librosidl_typesupport_fastrtps_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 69,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_introspection_cpp/lib/librosidl_typesupport_introspection_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 72,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_introspection_c/lib/librosidl_typesupport_introspection_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 66,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_fastrtps_cpp/lib/librosidl_typesupport_fastrtps_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rmw/lib/librmw.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_dynamic_typesupport/lib/librosidl_dynamic_typesupport.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 66,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/fastcdr/lib/libfastcdr.so.2.2.7",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_cpp/lib/librosidl_typesupport_cpp.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_generator_py.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/builtin_interfaces/lib/libbuiltin_interfaces__rosidl_generator_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 83,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_typesupport_c/lib/librosidl_typesupport_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcpputils/lib/librcpputils.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rosidl_runtime_c/lib/librosidl_runtime_c.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 12,
+				"fragment" : "/home/cuellarmaster/ros2_jazzy/install/rcutils/lib/librcutils.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 94,
+				"fragment" : "-ldl",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 94,
+				"fragment" : "-latomic",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-Wl,-rpath-link,/home/cuellarmaster/ros2_jazzy/install/service_msgs/lib:/home/cuellarmaster/ros2_jazzy/install/ament_index_cpp/lib",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "bike_game",
+	"nameOnDisk" : "bike_game",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/bike_game.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "EXECUTABLE"
+}
