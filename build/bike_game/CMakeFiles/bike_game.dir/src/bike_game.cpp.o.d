@@ -225,7 +225,8 @@ CMakeFiles/bike_game.dir/src/bike_game.cpp.o: \
  /usr/include/SDL2/SDL_render.h /usr/include/SDL2/SDL_shape.h \
  /usr/include/SDL2/SDL_system.h /usr/include/SDL2/SDL_timer.h \
  /usr/include/SDL2/SDL_version.h /usr/include/SDL2/SDL_locale.h \
- /usr/include/SDL2/SDL_misc.h /usr/include/c++/13/algorithm \
+ /usr/include/SDL2/SDL_misc.h /usr/include/SDL2/SDL_net.h \
+ /usr/include/SDL2/SDL.h /usr/include/c++/13/algorithm \
  /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \
  /usr/include/c++/13/initializer_list /usr/include/c++/13/bits/stl_heap.h \
@@ -243,7 +244,8 @@ CMakeFiles/bike_game.dir/src/bike_game.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h \
  /usr/include/c++/13/bits/parse_numbers.h /usr/include/c++/13/cstdio \
- /usr/include/c++/13/memory /usr/include/c++/13/bits/memoryfwd.h \
+ /usr/include/c++/13/cstring /usr/include/c++/13/memory \
+ /usr/include/c++/13/bits/memoryfwd.h \
  /usr/include/c++/13/bits/allocator.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++allocator.h \
  /usr/include/c++/13/bits/new_allocator.h \
@@ -313,12 +315,12 @@ CMakeFiles/bike_game.dir/src/bike_game.cpp.o: \
  /usr/include/c++/13/bits/random.tcc /usr/include/c++/13/numeric \
  /usr/include/c++/13/bits/stl_numeric.h \
  /usr/include/c++/13/pstl/glue_numeric_defs.h \
- /usr/include/c++/13/stdexcept \
+ /usr/include/c++/13/stdexcept /usr/include/c++/13/utility \
+ /usr/include/c++/13/bits/stl_relops.h \
  /home/cuellarmaster/ros2_jazzy/build/geometry_msgs/rosidl_generator_cpp/geometry_msgs/msg/pose_stamped.hpp \
  /home/cuellarmaster/ros2_jazzy/build/geometry_msgs/rosidl_generator_cpp/geometry_msgs/msg/detail/pose_stamped__struct.hpp \
  /usr/include/c++/13/array /usr/include/c++/13/compare \
  /home/cuellarmaster/ros2_jazzy/src/ros2/rosidl/rosidl_runtime_cpp/include/rosidl_runtime_cpp/bounded_vector.hpp \
- /usr/include/c++/13/utility /usr/include/c++/13/bits/stl_relops.h \
  /home/cuellarmaster/ros2_jazzy/src/ros2/rosidl/rosidl_runtime_cpp/include/rosidl_runtime_cpp/message_initialization.hpp \
  /home/cuellarmaster/ros2_jazzy/src/ros2/rosidl/rosidl_runtime_c/include/rosidl_runtime_c/message_initialization.h \
  /home/cuellarmaster/ros2_jazzy/install/std_msgs/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
@@ -431,7 +433,6 @@ CMakeFiles/bike_game.dir/src/bike_game.cpp.o: \
  /home/cuellarmaster/ros2_jazzy/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/srv/detail/list_parameters__type_support.hpp \
  /home/cuellarmaster/ros2_jazzy/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
  /home/cuellarmaster/ros2_jazzy/src/ros2/rosidl/rosidl_runtime_cpp/include/rosidl_typesupport_cpp/service_type_support.hpp \
- /usr/include/c++/13/cstring \
  /home/cuellarmaster/ros2_jazzy/src/ros2/rosidl/rosidl_runtime_c/include/rosidl_runtime_c/service_type_support_struct.h \
  /home/cuellarmaster/ros2_jazzy/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/parameter_descriptor.hpp \
  /home/cuellarmaster/ros2_jazzy/build/rcl_interfaces/rosidl_generator_cpp/rcl_interfaces/msg/detail/parameter_descriptor__struct.hpp \

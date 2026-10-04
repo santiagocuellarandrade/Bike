@@ -1,0 +1,8 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/bike_game.dir/src/bike_game.cpp.o[0m
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:146:10:[m[K [01;31m[Kfatal error: [m[KSDL2/SDL_net.h: No such file or directory
+  146 | #include [01;31m[K<SDL2/SDL_net.h>[m[K   // red UDP (paquete libsdl2-net-dev)
+      |          [01;31m[K^~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/bike_game.dir/build.make:76: CMakeFiles/bike_game.dir/src/bike_game.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bike_game.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

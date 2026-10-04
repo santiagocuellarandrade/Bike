@@ -1,0 +1,1183 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/bike_game.dir/src/bike_game.cpp.o[0m
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2757:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+ 2757 |   }
+      |    [01;31m[K^[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1264:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+ 1264 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In constructor ‘[01m[K{anonymous}::Game::[01;32m[KGame[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1271:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kwin_[m[K’ was not declared in this scope; did you mean ‘[01m[Kwint_t[m[K’?
+ 1271 |     [01;31m[Kwin_[m[K = SDL_CreateWindow(
+      |     [01;31m[K^~~~[m[K
+      |     [32m[Kwint_t[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1277:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kren_[m[K’ was not declared in this scope
+ 1277 |     [01;31m[Kren_[m[K = SDL_CreateRenderer(win_, -1, SDL_RENDERER_ACCELERATED);
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1286:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kgfx_[m[K’ was not declared in this scope
+ 1286 |     [01;31m[Kgfx_[m[K = Gfx(ren_);
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In destructor ‘[01m[K{anonymous}::Game::[01;32m[K~Game[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1293:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpad_[m[K’ was not declared in this scope
+ 1293 |     if ([01;31m[Kpad_[m[K) {SDL_GameControllerClose(pad_);}
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1294:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kren_[m[K’ was not declared in this scope
+ 1294 |     if ([01;31m[Kren_[m[K) {SDL_DestroyRenderer(ren_);}
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1295:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kwin_[m[K’ was not declared in this scope; did you mean ‘[01m[Kwint_t[m[K’?
+ 1295 |     if ([01;31m[Kwin_[m[K) {SDL_DestroyWindow(win_);}
+      |         [01;31m[K^~~~[m[K
+      |         [32m[Kwint_t[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kbool {anonymous}::Game::[01;32m[Ktick[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1306:5:[m[K [01;31m[Kerror: [m[K‘[01m[Krender[m[K’ was not declared in this scope; did you mean ‘[01m[Krindex[m[K’?
+ 1306 |     [01;31m[Krender[m[K();
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[Krindex[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KsetRemoteControl[m[K(double, double)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1313:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kremote_throttle_[m[K’ was not declared in this scope
+ 1313 |     [01;31m[Kremote_throttle_[m[K = std::clamp(throttle, -1.0, 1.0);
+      |     [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1314:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kremote_lean_[m[K’ was not declared in this scope
+ 1314 |     [01;31m[Kremote_lean_[m[K = std::clamp(lean, -1.0, 1.0);
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1315:5:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_cmd_[m[K’ was not declared in this scope
+ 1315 |     [01;31m[Klast_cmd_[m[K = std::chrono::steady_clock::now();
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KsetRemoteFire[m[K(bool)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1319:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kremote_fire_[m[K’ was not declared in this scope
+ 1319 |     [01;31m[Kremote_fire_[m[K = fire;
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1320:5:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_fire_cmd_[m[K’ was not declared in this scope
+ 1320 |     [01;31m[Klast_fire_cmd_[m[K = std::chrono::steady_clock::now();
+      |     [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kbool {anonymous}::Game::[01;32m[KenableNetwork[m[K(bool, const std::string&, int)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1327:5:[m[K [01;31m[Kerror: [m[K‘[01m[KnetOn_[m[K’ was not declared in this scope
+ 1327 |     [01;31m[KnetOn_[m[K = host ? net_.host(port) : net_.join(ip, port);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1327:21:[m[K [01;31m[Kerror: [m[K‘[01m[Knet_[m[K’ was not declared in this scope
+ 1327 |     netOn_ = host ? [01;31m[Knet_[m[K.host(port) : net_.join(ip, port);
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kint {anonymous}::Game::[01;32m[Kscore[m[K() const[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1333:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kscore_[m[K’ was not declared in this scope; did you mean ‘[01m[Kscore[m[K’?
+ 1333 |   int score() const {return [01;31m[Kscore_[m[K;}
+      |                             [01;31m[K^~~~~~[m[K
+      |                             [32m[Kscore[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kint {anonymous}::Game::[01;32m[Khealth[m[K() const[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1334:61:[m[K [01;31m[Kerror: [m[K‘[01m[Khealth_[m[K’ was not declared in this scope; did you mean ‘[01m[Khealth[m[K’?
+ 1334 |   int health() const {return static_cast<int>(std::max(0.0, [01;31m[Khealth_[m[K));}
+      |                                                             [01;31m[K^~~~~~~[m[K
+      |                                                             [32m[Khealth[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[K{anonymous}::Vec2 {anonymous}::Game::[01;32m[KmotoPos[m[K() const[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1335:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 1335 |   Vec2 motoPos() const {return [01;31m[Kmoto_[m[K.mid();}
+      |                                [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kdouble {anonymous}::Game::[01;32m[KmotoYaw[m[K() const[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1338:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 1338 |     const Vec2 d = [01;31m[Kmoto_[m[K.front.p - moto_.rear.p;
+      |                    [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kbool {anonymous}::Game::[01;32m[KsaveScreenshot[m[K(const char*)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1347:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kren_[m[K’ was not declared in this scope
+ 1347 |     SDL_RenderReadPixels([01;31m[Kren_[m[K, nullptr, SDL_PIXELFORMAT_ARGB8888, s->pixels, s->pitch);
+      |                          [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KbuildWorld[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1387:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kspawns_[m[K’ was not declared in this scope; did you mean ‘[01m[KSpawn[m[K’?
+ 1387 |       [01;31m[Kspawns_[m[K.push_back(s);
+      |       [01;31m[K^~~~~~~[m[K
+      |       [32m[KSpawn[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1389:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kspawn_dead_[m[K’ was not declared in this scope
+ 1389 |     [01;31m[Kspawn_dead_[m[K.assign(spawns_.size(), 0);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1389:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kspawns_[m[K’ was not declared in this scope; did you mean ‘[01m[KSpawn[m[K’?
+ 1389 |     spawn_dead_.assign([01;31m[Kspawns_[m[K.size(), 0);
+      |                        [01;31m[K^~~~~~~[m[K
+      |                        [32m[KSpawn[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1393:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpickups_[m[K’ was not declared in this scope; did you mean ‘[01m[KPickup[m[K’?
+ 1393 |       [01;31m[Kpickups_[m[K.push_back({{x, track_.at(x) - 48.0}, PickupKind::AMMO, false});
+      |       [01;31m[K^~~~~~~~[m[K
+      |       [32m[KPickup[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1393:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1393 |       pickups_.push_back({{x, [01;31m[Ktrack_[m[K.at(x) - 48.0}, PickupKind::AMMO, false});
+      |                               [01;31m[K^~~~~~[m[K
+      |                               [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1396:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kpickups_[m[K’ was not declared in this scope; did you mean ‘[01m[KPickup[m[K’?
+ 1396 |       [01;31m[Kpickups_[m[K.push_back({{x, track_.at(x) - 48.0}, PickupKind::MEDKIT, false});
+      |       [01;31m[K^~~~~~~~[m[K
+      |       [32m[KPickup[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1396:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1396 |       pickups_.push_back({{x, [01;31m[Ktrack_[m[K.at(x) - 48.0}, PickupKind::MEDKIT, false});
+      |                               [01;31m[K^~~~~~[m[K
+      |                               [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KrestartAll[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1403:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kscore_[m[K’ was not declared in this scope; did you mean ‘[01m[Kscore[m[K’?
+ 1403 |     [01;31m[Kscore_[m[K = 0;
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[Kscore[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1404:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kkills_[m[K’ was not declared in this scope; did you mean ‘[01m[Kkillpg[m[K’?
+ 1404 |     [01;31m[Kkills_[m[K = 0;
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[Kkillpg[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1405:5:[m[K [01;31m[Kerror: [m[K‘[01m[Khealth_[m[K’ was not declared in this scope; did you mean ‘[01m[Khealth[m[K’?
+ 1405 |     [01;31m[Khealth_[m[K = MAX_HEALTH;
+      |     [01;31m[K^~~~~~~[m[K
+      |     [32m[Khealth[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1406:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kammo_[m[K’ was not declared in this scope
+ 1406 |     [01;31m[Kammo_[m[K = START_AMMO;
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1407:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcheckpoint_x_[m[K’ was not declared in this scope; did you mean ‘[01m[KcheckpointX[m[K’?
+ 1407 |     [01;31m[Kcheckpoint_x_[m[K = 0.0;
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+      |     [32m[KcheckpointX[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1408:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kspawn_dead_[m[K’ was not declared in this scope
+ 1408 |     std::fill([01;31m[Kspawn_dead_[m[K.begin(), spawn_dead_.end(), 0);
+      |               [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1409:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kpickups_[m[K’ was not declared in this scope; did you mean ‘[01m[KPickup[m[K’?
+ 1409 |     for (Pickup & p : [01;31m[Kpickups_[m[K) {p.taken = false;}
+      |                       [01;31m[K^~~~~~~~[m[K
+      |                       [32m[KPickup[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1410:5:[m[K [01;31m[Kerror: [m[K‘[01m[Khint_time_[m[K’ was not declared in this scope
+ 1410 |     [01;31m[Khint_time_[m[K = 12.0;                 // mostrar ayuda de controles 12 segundos
+      |     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KstartRun[m[K(double)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1417:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 1417 |     [01;31m[Kmoto_[m[K.reset(track_, x0);
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1417:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1417 |     moto_.reset([01;31m[Ktrack_[m[K, x0);
+      |                 [01;31m[K^~~~~~[m[K
+      |                 [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1418:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kbullets_[m[K’ was not declared in this scope; did you mean ‘[01m[KBullet[m[K’?
+ 1418 |     [01;31m[Kbullets_[m[K.clear();
+      |     [01;31m[K^~~~~~~~[m[K
+      |     [32m[KBullet[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1419:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kballs_[m[K’ was not declared in this scope; did you mean ‘[01m[KBall[m[K’?
+ 1419 |     [01;31m[Kballs_[m[K.clear();                    // quitar los balones que estaban volando
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[KBall[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1420:5:[m[K [01;31m[Kerror: [m[K‘[01m[KenemyBullets_[m[K’ was not declared in this scope
+ 1420 |     [01;31m[KenemyBullets_[m[K.clear();             // quitar las balas de las M60
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1421:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kshots_[m[K’ was not declared in this scope; did you mean ‘[01m[KShot[m[K’?
+ 1421 |     [01;31m[Kshots_[m[K.clear();                    // quitar cohetes, cuchillos, lasers, granadas...
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[KShot[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1422:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kblasts_[m[K’ was not declared in this scope; did you mean ‘[01m[KBlast[m[K’?
+ 1422 |     [01;31m[Kblasts_[m[K.clear();                   // quitar explosiones
+      |     [01;31m[K^~~~~~~[m[K
+      |     [32m[KBlast[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1423:5:[m[K [01;31m[Kerror: [m[K‘[01m[KspawnGrace_[m[K’ was not declared in this scope
+ 1423 |     [01;31m[KspawnGrace_[m[K = 1.5;                 // un momento de inmunidad a balas al reaparecer
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1424:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kfx_[m[K’ was not declared in this scope
+ 1424 |     [01;31m[Kfx_[m[K.clear();
+      |     [01;31m[K^~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1425:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmonsters_[m[K’ was not declared in this scope; did you mean ‘[01m[KMonster[m[K’?
+ 1425 |     [01;31m[Kmonsters_[m[K.clear();
+      |     [01;31m[K^~~~~~~~~[m[K
+      |     [32m[KMonster[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1426:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kspawns_[m[K’ was not declared in this scope; did you mean ‘[01m[KSpawn[m[K’?
+ 1426 |     for (size_t i = 0; i < [01;31m[Kspawns_[m[K.size(); ++i) {
+      |                            [01;31m[K^~~~~~~[m[K
+      |                            [32m[KSpawn[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1427:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kspawn_dead_[m[K’ was not declared in this scope
+ 1427 |       if ([01;31m[Kspawn_dead_[m[K[i] || spawns_[i].x < x0 + 500.0) {continue;}
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1430:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_[m[K’ was not declared in this scope; did you mean ‘[01m[KState[m[K’?
+ 1430 |     [01;31m[Kstate_[m[K = State::RUNNING;
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[KState[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1431:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_timer_[m[K’ was not declared in this scope
+ 1431 |     [01;31m[Kstate_timer_[m[K = 0.0;
+      |     [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1432:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kinvuln_[m[K’ was not declared in this scope
+ 1432 |     [01;31m[Kinvuln_[m[K = 1.5;
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1433:5:[m[K [01;31m[Kerror: [m[K‘[01m[Khurt_flash_[m[K’ was not declared in this scope
+ 1433 |     [01;31m[Khurt_flash_[m[K = 0.0;
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1434:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmuzzle_t_[m[K’ was not declared in this scope
+ 1434 |     [01;31m[Kmuzzle_t_[m[K = 0.0;
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1435:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kfire_cd_[m[K’ was not declared in this scope
+ 1435 |     [01;31m[Kfire_cd_[m[K = 0.0;
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1436:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kbanner_[m[K’ was not declared in this scope
+ 1436 |     [01;31m[Kbanner_[m[K.clear();
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1437:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kbanner_t_[m[K’ was not declared in this scope
+ 1437 |     [01;31m[Kbanner_t_[m[K = 0.0;
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1439:5:[m[K [01;31m[Kerror: [m[K‘[01m[KriderOff_[m[K’ was not declared in this scope
+ 1439 |     [01;31m[KriderOff_[m[K = false;
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1440:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kdancing_[m[K’ was not declared in this scope
+ 1440 |     [01;31m[Kdancing_[m[K = false;
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1441:5:[m[K [01;31m[Kerror: [m[K‘[01m[KfinishT_[m[K’ was not declared in this scope
+ 1441 |     [01;31m[KfinishT_[m[K = 0.0;
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1442:5:[m[K [01;31m[Kerror: [m[K‘[01m[KoffT_[m[K’ was not declared in this scope
+ 1442 |     [01;31m[KoffT_[m[K = 0.0;
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1443:5:[m[K [01;31m[Kerror: [m[K‘[01m[KdanceT_[m[K’ was not declared in this scope
+ 1443 |     [01;31m[KdanceT_[m[K = 0.0;
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1445:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcam_[m[K’ was not declared in this scope
+ 1445 |     [01;31m[Kcam_[m[K = {moto_.mid().x - WIN_W * 0.33, moto_.mid().y - WIN_H * 0.58};
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[K{anonymous}::Monster {anonymous}::Game::[01;32m[KmakeMonster[m[K(int) const[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1451:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kspawns_[m[K’ was not declared in this scope; did you mean ‘[01m[KspawnId[m[K’?
+ 1451 |     const Spawn & s = [01;31m[Kspawns_[m[K[spawnId];
+      |                       [01;31m[K^~~~~~~[m[K
+      |                       [32m[KspawnId[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1463:23:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1463 |           m.p = {s.x, [01;31m[Ktrack_[m[K.at(s.x)};
+      |                       [01;31m[K^~~~~~[m[K
+      |                       [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1463:37:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[K{anonymous}::Vec2[m[K’ and ‘[01m[K<brace-enclosed initializer list>[m[K’)
+ 1463 |           m.p = {s.x, track_.at(s.x)[01;31m[K}[m[K;
+      |                                     [01;31m[K^[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr {anonymous}::Vec2& {anonymous}::Vec2::[01;32m[Koperator=[m[K(const {anonymous}::Vec2&)[m[K’
+  300 | struct [01;36m[KVec2[m[K
+      |        [01;36m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst {anonymous}::Vec2&[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr {anonymous}::Vec2& {anonymous}::Vec2::[01;32m[Koperator=[m[K({anonymous}::Vec2&&)[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[K{anonymous}::Vec2&&[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1471:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1471 |         m.p = {s.x, [01;31m[Ktrack_[m[K.at(s.x) - 170.0};
+      |                     [01;31m[K^~~~~~[m[K
+      |                     [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1471:43:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[K{anonymous}::Vec2[m[K’ and ‘[01m[K<brace-enclosed initializer list>[m[K’)
+ 1471 |         m.p = {s.x, track_.at(s.x) - 170.0[01;31m[K}[m[K;
+      |                                           [01;31m[K^[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr {anonymous}::Vec2& {anonymous}::Vec2::[01;32m[Koperator=[m[K(const {anonymous}::Vec2&)[m[K’
+  300 | struct [01;36m[KVec2[m[K
+      |        [01;36m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst {anonymous}::Vec2&[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr {anonymous}::Vec2& {anonymous}::Vec2::[01;32m[Koperator=[m[K({anonymous}::Vec2&&)[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[K{anonymous}::Vec2&&[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1476:35:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[K{anonymous}::Vec2[m[K’ and ‘[01m[K<brace-enclosed initializer list>[m[K’)
+ 1476 |         m.p = {s.x, track_.at(s.x)[01;31m[K}[m[K;
+      |                                   [01;31m[K^[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr {anonymous}::Vec2& {anonymous}::Vec2::[01;32m[Koperator=[m[K(const {anonymous}::Vec2&)[m[K’
+  300 | struct [01;36m[KVec2[m[K
+      |        [01;36m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst {anonymous}::Vec2&[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr {anonymous}::Vec2& {anonymous}::Vec2::[01;32m[Koperator=[m[K({anonymous}::Vec2&&)[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[K{anonymous}::Vec2&&[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1482:43:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[K{anonymous}::Vec2[m[K’ and ‘[01m[K<brace-enclosed initializer list>[m[K’)
+ 1482 |         m.p = {s.x, track_.at(s.x) - 260.0[01;31m[K}[m[K;
+      |                                           [01;31m[K^[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr {anonymous}::Vec2& {anonymous}::Vec2::[01;32m[Koperator=[m[K(const {anonymous}::Vec2&)[m[K’
+  300 | struct [01;36m[KVec2[m[K
+      |        [01;36m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst {anonymous}::Vec2&[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr {anonymous}::Vec2& {anonymous}::Vec2::[01;32m[Koperator=[m[K({anonymous}::Vec2&&)[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[K{anonymous}::Vec2&&[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KstartRagdoll[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1507:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_[m[K’ was not declared in this scope
+ 1507 |     const Pose & p = [01;31m[Kpose_[m[K;
+      |                      [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1511:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 1511 |     const Vec2 v0 = [01;31m[Kmoto_[m[K.velocity();
+      |                     [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1519:7:[m[K [01;31m[Kerror: [m[K‘[01m[Krag_[m[K’ was not declared in this scope
+ 1519 |       [01;31m[Krag_[m[K[i].p = pts[i];
+      |       [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1525:5:[m[K [01;31m[Kerror: [m[K‘[01m[KragSticks_[m[K’ was not declared in this scope; did you mean ‘[01m[KRagStick[m[K’?
+ 1525 |     [01;31m[KragSticks_[m[K.clear();
+      |     [01;31m[K^~~~~~~~~~[m[K
+      |     [32m[KRagStick[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1539:5:[m[K [01;31m[Kerror: [m[K‘[01m[KragBase_[m[K’ was not declared in this scope
+ 1539 |     [01;31m[KragBase_[m[K = std::atan2(moto_.axis().y, moto_.axis().x) - std::atan2(u0.y, u0.x);
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1545:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcrash_frames_[m[K’ was not declared in this scope
+ 1545 |     [01;31m[Kcrash_frames_[m[K = 0;
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1546:5:[m[K [01;31m[Kerror: [m[K‘[01m[KragHitCd_[m[K’ was not declared in this scope
+ 1546 |     [01;31m[KragHitCd_[m[K = 0.0;
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KbuildRagPose[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1553:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_[m[K’ was not declared in this scope
+ 1553 |     [01;31m[Kpose_[m[K.hip = rag_[R_HIP].p;
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1553:17:[m[K [01;31m[Kerror: [m[K‘[01m[Krag_[m[K’ was not declared in this scope
+ 1553 |     pose_.hip = [01;31m[Krag_[m[K[R_HIP].p;
+      |                 [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1563:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kaim_[m[K’ was not declared in this scope
+ 1563 |     [01;31m[Kaim_[m[K = normalized(pose_.handGun - pose_.elbowGun);
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[K{anonymous}::Vec2 {anonymous}::Game::[01;32m[KragVelocity[m[K() const[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1570:13:[m[K [01;31m[Kerror: [m[K‘[01m[Krag_[m[K’ was not declared in this scope
+ 1570 |     return ([01;31m[Krag_[m[K[R_HIP].p - rag_[R_HIP].prev) * (RAG_SUB / DT);
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateRagdoll[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1579:5:[m[K [01;31m[Kerror: [m[K‘[01m[KragHitCd_[m[K’ was not declared in this scope
+ 1579 |     [01;31m[KragHitCd_[m[K = std::max(0.0, ragHitCd_ - DT);
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1585:23:[m[K [01;31m[Kerror: [m[K‘[01m[Krag_[m[K’ was not declared in this scope
+ 1585 |       for (Mass & q : [01;31m[Krag_[m[K) {
+      |                       [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1592:36:[m[K [01;31m[Kerror: [m[K‘[01m[KragSticks_[m[K’ was not declared in this scope; did you mean ‘[01m[KRagStick[m[K’?
+ 1592 |         for (const RagStick & st : [01;31m[KragSticks_[m[K) {
+      |                                    [01;31m[K^~~~~~~~~~[m[K
+      |                                    [32m[KRagStick[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1593:26:[m[K [01;31m[Kerror: [m[K‘[01m[Krag_[m[K’ was not declared in this scope
+ 1593 |           const Vec2 d = [01;31m[Krag_[m[K[st.b].p - rag_[st.a].p;
+      |                          [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1600:29:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1600 |           const double gy = [01;31m[Ktrack_[m[K.at(rag_[i].p.x);
+      |                             [01;31m[K^~~~~~[m[K
+      |                             [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1600:39:[m[K [01;31m[Kerror: [m[K‘[01m[Krag_[m[K’ was not declared in this scope
+ 1600 |           const double gy = track_.at([01;31m[Krag_[m[K[i].p.x);
+      |                                       [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1606:20:[m[K [01;31m[Kerror: [m[K‘[01m[Krag_[m[K’ was not declared in this scope
+ 1606 |         Mass & q = [01;31m[Krag_[m[K[i];
+      |                    [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1607:27:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1607 |         const double gy = [01;31m[Ktrack_[m[K.at(q.p.x);
+      |                           [01;31m[K^~~~~~[m[K
+      |                           [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1624:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kshake_[m[K’ was not declared in this scope
+ 1624 |       [01;31m[Kshake_[m[K = std::max(shake_, std::min(10.0, impact * 0.012));
+      |       [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1631:13:[m[K [01;31m[Kerror: [m[K‘[01m[Krag_[m[K’ was not declared in this scope
+ 1631 |         if ([01;31m[Krag_[m[K[i].contact && rnd(0.0, 1.0) < 0.35) {
+      |             [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1632:30:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1632 |           emit({rag_[i].p.x, [01;31m[Ktrack_[m[K.at(rag_[i].p.x)}, 1, -PI * 0.75, 0.6, 80.0 + speed * 0.1, rgb(140, 105, 75, 170), 0.6, 6.0, 40.0, 1.5, true);
+      |                              [01;31m[K^~~~~~[m[K
+      |                              [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1632:15:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[K{anonymous}::Vec2[m[K’
+ 1632 |           [01;31m[Kemit({rag_[i].p.x, track_.at(rag_[i].p.x)}, 1, -PI * 0.75, 0.6, 80.0 + speed * 0.1, rgb(140, 105, 75, 170), 0.6, 6.0, 40.0, 1.5, true)[m[K;
+      |           [01;31m[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1771:10:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid {anonymous}::Game::[01;32m[Kemit[m[K({anonymous}::Vec2, int, double, double, double, {anonymous}::Color, double, double, double, double, bool)[m[K’
+ 1771 |     [01;36m[KVec2 pos[m[K, int count, double angle, double spread, double speed, Color col, double life,
+      |     [01;36m[K~~~~~^~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KcrashSparks[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1642:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 1642 |     const Vec2 vel = [01;31m[Kmoto_[m[K.velocity();
+      |                      [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[K{anonymous}::Vec2 {anonymous}::Game::[01;32m[KriderAxis[m[K() const[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1658:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_[m[K’ was not declared in this scope; did you mean ‘[01m[KState[m[K’?
+ 1658 |     if ([01;31m[Kstate_[m[K != State::CRASHED) {return moto_.axis();}
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[KState[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1658:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 1658 |     if (state_ != State::CRASHED) {return [01;31m[Kmoto_[m[K.axis();}
+      |                                           [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1659:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_[m[K’ was not declared in this scope
+ 1659 |     const Vec2 w = normalized([01;31m[Kpose_[m[K.shoulder - pose_.hip);             // "arriba" del torso
+      |                               [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1660:37:[m[K [01;31m[Kerror: [m[K‘[01m[KragBase_[m[K’ was not declared in this scope
+ 1660 |     return rotated(Vec2{-w.y, w.x}, [01;31m[KragBase_[m[K);
+      |                                     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KopenFirstPad[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1672:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpad_[m[K’ was not declared in this scope
+ 1672 |     if ([01;31m[Kpad_[m[K) {return;}
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1675:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpad_[m[K’ was not declared in this scope
+ 1675 |         [01;31m[Kpad_[m[K = SDL_GameControllerOpen(i);
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kdouble {anonymous}::Game::[01;32m[KpadRaw[m[K(SDL_GameControllerAxis) const[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1684:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kpad_[m[K’ was not declared in this scope
+ 1684 |     return std::clamp(SDL_GameControllerGetAxis([01;31m[Kpad_[m[K, a) / 32767.0, -1.0, 1.0);
+      |                                                 [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kbool {anonymous}::Game::[01;32m[KhandleEvents[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1702:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kmouse_seen_[m[K’ was not declared in this scope
+ 1702 |       if (e.type == SDL_MOUSEMOTION) {[01;31m[Kmouse_seen_[m[K = true; aimFromPad_ = false;}   // mover el mouse devuelve la punteria al mouse
+      |                                       [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1702:59:[m[K [01;31m[Kerror: [m[K‘[01m[KaimFromPad_[m[K’ was not declared in this scope
+ 1702 |       if (e.type == SDL_MOUSEMOTION) {mouse_seen_ = true; [01;31m[KaimFromPad_[m[K = false;}   // mover el mouse devuelve la punteria al mouse
+      |                                                           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1705:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kpad_[m[K’ was not declared in this scope
+ 1705 |       if (e.type == SDL_CONTROLLERDEVICEREMOVED && [01;31m[Kpad_[m[K &&
+      |                                                    [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KreadInput[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1722:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kin_[m[K’ was not declared in this scope; did you mean ‘[01m[Kint[m[K’?
+ 1722 |     [01;31m[Kin_[m[K = Input{};
+      |     [01;31m[K^~~[m[K
+      |     [32m[Kint[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1730:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmouse_[m[K’ was not declared in this scope
+ 1730 |     [01;31m[Kmouse_[m[K = {static_cast<double>(mx), static_cast<double>(my)};
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1734:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpad_[m[K’ was not declared in this scope
+ 1734 |     if ([01;31m[Kpad_[m[K) {
+      |         [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1748:9:[m[K [01;31m[Kerror: [m[K‘[01m[KpadAim_[m[K’ was not declared in this scope
+ 1748 |         [01;31m[KpadAim_[m[K = normalized(st);      // en SDL "abajo" es +y, igual que en nuestro juego
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1749:9:[m[K [01;31m[Kerror: [m[K‘[01m[KaimFromPad_[m[K’ was not declared in this scope
+ 1749 |         [01;31m[KaimFromPad_[m[K = true;
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1755:15:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_cmd_[m[K’ was not declared in this scope
+ 1755 |     if (now - [01;31m[Klast_cmd_[m[K < std::chrono::milliseconds(500)) {
+      |               [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1756:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kremote_throttle_[m[K’ was not declared in this scope
+ 1756 |       in_.throttle += [01;31m[Kremote_throttle_[m[K;
+      |                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1757:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kremote_lean_[m[K’ was not declared in this scope
+ 1757 |       in_.lean += [01;31m[Kremote_lean_[m[K;
+      |                   [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1759:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kremote_fire_[m[K’ was not declared in this scope
+ 1759 |     if ([01;31m[Kremote_fire_[m[K && now - last_fire_cmd_ < std::chrono::milliseconds(500)) {in_.fire = true;}
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1759:31:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_fire_cmd_[m[K’ was not declared in this scope
+ 1759 |     if (remote_fire_ && now - [01;31m[Klast_fire_cmd_[m[K < std::chrono::milliseconds(500)) {in_.fire = true;}
+      |                               [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kdouble {anonymous}::Game::[01;32m[Krnd[m[K(double, double)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1766:87:[m[K [01;31m[Kerror: [m[K‘[01m[Krng_[m[K’ was not declared in this scope
+ 1766 |   double rnd(double a, double b) {return std::uniform_real_distribution<double>(a, b)([01;31m[Krng_[m[K);}
+      |                                                                                       [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[Kemit[m[K({anonymous}::Vec2, int, double, double, double, {anonymous}::Color, double, double, double, double, bool)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1774:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kfx_[m[K’ was not declared in this scope
+ 1774 |     for (int i = 0; i < count && [01;31m[Kfx_[m[K.size() < MAX_FX; ++i) {
+      |                                  [01;31m[K^~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[Kupdate[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1794:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_[m[K’ was not declared in this scope; did you mean ‘[01m[KState[m[K’?
+ 1794 |     if ([01;31m[Kstate_[m[K == State::CRASHED && crash_frames_ < 45) {
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[KState[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1794:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kcrash_frames_[m[K’ was not declared in this scope
+ 1794 |     if (state_ == State::CRASHED && [01;31m[Kcrash_frames_[m[K < 45) {
+      |                                     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1798:5:[m[K [01;31m[Kerror: [m[K‘[01m[Ktime_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimex[m[K’?
+ 1798 |     [01;31m[Ktime_[m[K += DT;
+      |     [01;31m[K^~~~~[m[K
+      |     [32m[Ktimex[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1799:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kinvuln_[m[K’ was not declared in this scope
+ 1799 |     [01;31m[Kinvuln_[m[K = std::max(0.0, invuln_ - DT);
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1800:5:[m[K [01;31m[Kerror: [m[K‘[01m[KspawnGrace_[m[K’ was not declared in this scope
+ 1800 |     [01;31m[KspawnGrace_[m[K = std::max(0.0, spawnGrace_ - DT);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1801:5:[m[K [01;31m[Kerror: [m[K‘[01m[Khurt_flash_[m[K’ was not declared in this scope
+ 1801 |     [01;31m[Khurt_flash_[m[K = std::max(0.0, hurt_flash_ - DT);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1802:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmuzzle_t_[m[K’ was not declared in this scope
+ 1802 |     [01;31m[Kmuzzle_t_[m[K = std::max(0.0, muzzle_t_ - DT);
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1803:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kfire_cd_[m[K’ was not declared in this scope
+ 1803 |     [01;31m[Kfire_cd_[m[K = std::max(0.0, fire_cd_ - DT);
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1804:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kbanner_t_[m[K’ was not declared in this scope
+ 1804 |     [01;31m[Kbanner_t_[m[K = std::max(0.0, banner_t_ - DT);
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1805:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kno_ammo_t_[m[K’ was not declared in this scope
+ 1805 |     [01;31m[Kno_ammo_t_[m[K = std::max(0.0, no_ammo_t_ - DT);
+      |     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1806:5:[m[K [01;31m[Kerror: [m[K‘[01m[Khint_time_[m[K’ was not declared in this scope
+ 1806 |     [01;31m[Khint_time_[m[K = std::max(0.0, hint_time_ - DT);
+      |     [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1808:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_[m[K’ was not declared in this scope; did you mean ‘[01m[KState[m[K’?
+ 1808 |     if ([01;31m[Kstate_[m[K == State::RUNNING) {
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[KState[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1811:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 1811 |       [01;31m[Kmoto_[m[K.step(track_, DT, 0.0, 0.0, 0.15);     // la moto sigue sola, sin motor y con las ruedas rozando
+      |       [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1811:18:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1811 |       moto_.step([01;31m[Ktrack_[m[K, DT, 0.0, 0.0, 0.15);     // la moto sigue sola, sin motor y con las ruedas rozando
+      |                  [01;31m[K^~~~~~[m[K
+      |                  [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1814:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 1814 |       [01;31m[Kmoto_[m[K.step(track_, DT, 0.0, 0.0, 0.8);      // en la meta la moto frena hasta quedar parada
+      |       [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1814:18:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1814 |       moto_.step([01;31m[Ktrack_[m[K, DT, 0.0, 0.0, 0.8);      // en la meta la moto frena hasta quedar parada
+      |                  [01;31m[K^~~~~~[m[K
+      |                  [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1816:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_[m[K’ was not declared in this scope; did you mean ‘[01m[KState[m[K’?
+ 1816 |     if ([01;31m[Kstate_[m[K == State::CRASHED) {updateRagdoll();} else {updateAimAndPose();}
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[KState[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1818:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_[m[K’ was not declared in this scope; did you mean ‘[01m[KState[m[K’?
+ 1818 |     if ([01;31m[Kstate_[m[K == State::RUNNING) {
+      |         [01;31m[K^~~~~~[m[K
+      |         [32m[KState[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1833:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_timer_[m[K’ was not declared in this scope
+ 1833 |       [01;31m[Kstate_timer_[m[K -= DT;
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[Krespawn[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1846:5:[m[K [01;31m[Kerror: [m[K‘[01m[Khealth_[m[K’ was not declared in this scope; did you mean ‘[01m[Khealth[m[K’?
+ 1846 |     [01;31m[Khealth_[m[K = MAX_HEALTH;
+      |     [01;31m[K^~~~~~~[m[K
+      |     [32m[Khealth[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1847:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kammo_[m[K’ was not declared in this scope
+ 1847 |     [01;31m[Kammo_[m[K = std::max(ammo_, 30);
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1848:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kcheckpoint_x_[m[K’ was not declared in this scope; did you mean ‘[01m[KcheckpointX[m[K’?
+ 1848 |     startRun([01;31m[Kcheckpoint_x_[m[K > 0.0 ? checkpoint_x_ : 120.0);
+      |              [01;31m[K^~~~~~~~~~~~~[m[K
+      |              [32m[KcheckpointX[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KstepMoto[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1853:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 1853 |     const Vec2 vBefore = [01;31m[Kmoto_[m[K.velocity();
+      |                          [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1856:16:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1856 |     moto_.step([01;31m[Ktrack_[m[K, DT, in_.throttle, in_.lean, in_.brake);
+      |                [01;31m[K^~~~~~[m[K
+      |                [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1856:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kin_[m[K’ was not declared in this scope; did you mean ‘[01m[Kint[m[K’?
+ 1856 |     moto_.step(track_, DT, [01;31m[Kin_[m[K.throttle, in_.lean, in_.brake);
+      |                            [01;31m[K^~~[m[K
+      |                            [32m[Kint[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1863:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kshake_[m[K’ was not declared in this scope
+ 1863 |       [01;31m[Kshake_[m[K = std::max(shake_, std::min(12.0, vBefore.y * 0.012));
+      |       [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateAimAndPose[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1881:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 1881 |     const Vec2 shoulder = [01;31m[Kmoto_[m[K.local(-9, 64);
+      |                           [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1883:9:[m[K [01;31m[Kerror: [m[K‘[01m[KaimFromPad_[m[K’ was not declared in this scope
+ 1883 |     if ([01;31m[KaimFromPad_[m[K) {
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1884:13:[m[K [01;31m[Kerror: [m[K‘[01m[KpadAim_[m[K’ was not declared in this scope
+ 1884 |       aim = [01;31m[KpadAim_[m[K;              // el stick izquierdo manda
+      |             [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1885:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kmouse_seen_[m[K’ was not declared in this scope
+ 1885 |     } else if ([01;31m[Kmouse_seen_[m[K) {
+      |                [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1887:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kmouse_[m[K’ was not declared in this scope
+ 1887 |       const Vec2 target{[01;31m[Kmouse_[m[K.x + cam_.x, mouse_.y + cam_.y};
+      |                         [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1887:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kcam_[m[K’ was not declared in this scope
+ 1887 |       const Vec2 target{mouse_.x + [01;31m[Kcam_[m[K.x, mouse_.y + cam_.y};
+      |                                    [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1891:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kaim_[m[K’ was not declared in this scope; did you mean ‘[01m[Kaim[m[K’?
+ 1891 |     [01;31m[Kaim_[m[K = aim;
+      |     [01;31m[K^~~~[m[K
+      |     [32m[Kaim[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1892:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_[m[K’ was not declared in this scope
+ 1892 |     [01;31m[Kpose_[m[K = makePose(moto_, aim_);
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KhandleShooting[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1897:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kin_[m[K’ was not declared in this scope; did you mean ‘[01m[Kint[m[K’?
+ 1897 |     if (![01;31m[Kin_[m[K.fire || fire_cd_ > 0.0) {return;}
+      |          [01;31m[K^~~[m[K
+      |          [32m[Kint[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1897:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kfire_cd_[m[K’ was not declared in this scope
+ 1897 |     if (!in_.fire || [01;31m[Kfire_cd_[m[K > 0.0) {return;}
+      |                      [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1898:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kammo_[m[K’ was not declared in this scope
+ 1898 |     if ([01;31m[Kammo_[m[K <= 0) {
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1899:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kfire_cd_[m[K’ was not declared in this scope
+ 1899 |       [01;31m[Kfire_cd_[m[K = 0.25;
+      |       [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1900:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kno_ammo_t_[m[K’ was not declared in this scope
+ 1900 |       [01;31m[Kno_ammo_t_[m[K = 0.6;           // muestra "SIN BALAS!"
+      |       [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1903:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kfire_cd_[m[K’ was not declared in this scope
+ 1903 |     [01;31m[Kfire_cd_[m[K = FIRE_DELAY;
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1904:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kammo_[m[K’ was not declared in this scope
+ 1904 |     --[01;31m[Kammo_[m[K;
+      |       [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1905:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kaim_[m[K’ was not declared in this scope
+ 1905 |     const Vec2 dir = rotated([01;31m[Kaim_[m[K, rnd(-0.035, 0.035));   // pequeña dispersion
+      |                              [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1907:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_[m[K’ was not declared in this scope
+ 1907 |     b.p = [01;31m[Kpose_[m[K.gunTip;
+      |           [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1908:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 1908 |     b.v = dir * BULLET_SPEED + [01;31m[Kmoto_[m[K.velocity();          // la bala hereda la velocidad de la moto
+      |                                [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1910:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kbullets_[m[K’ was not declared in this scope; did you mean ‘[01m[KBullet[m[K’?
+ 1910 |     [01;31m[Kbullets_[m[K.push_back(b);
+      |     [01;31m[K^~~~~~~~[m[K
+      |     [32m[KBullet[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1911:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmuzzle_t_[m[K’ was not declared in this scope
+ 1911 |     [01;31m[Kmuzzle_t_[m[K = 0.06;
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1912:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kshake_[m[K’ was not declared in this scope
+ 1912 |     [01;31m[Kshake_[m[K = std::max(shake_, 2.5);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateBullets[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1918:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kbullets_[m[K’ was not declared in this scope; did you mean ‘[01m[KBullet[m[K’?
+ 1918 |     for (Bullet & b : [01;31m[Kbullets_[m[K) {
+      |                       [01;31m[K^~~~~~~~[m[K
+      |                       [32m[KBullet[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1923:19:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 1923 |       if (b.p.y > [01;31m[Ktrack_[m[K.at(b.p.x)) {
+      |                   [01;31m[K^~~~~~[m[K
+      |                   [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1932:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kballs_[m[K’ was not declared in this scope; did you mean ‘[01m[KBall[m[K’?
+ 1932 |       for (Ball & ba : [01;31m[Kballs_[m[K) {
+      |                        [01;31m[K^~~~~~[m[K
+      |                        [32m[KBall[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1936:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kscore_[m[K’ was not declared in this scope; did you mean ‘[01m[Kscore[m[K’?
+ 1936 |           [01;31m[Kscore_[m[K += 5;
+      |           [01;31m[K^~~~~~[m[K
+      |           [32m[Kscore[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1948:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kshots_[m[K’ was not declared in this scope; did you mean ‘[01m[KShot[m[K’?
+ 1948 |       for (Shot & sh : [01;31m[Kshots_[m[K) {
+      |                        [01;31m[K^~~~~~[m[K
+      |                        [32m[KShot[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1955:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kscore_[m[K’ was not declared in this scope; did you mean ‘[01m[Kscore[m[K’?
+ 1955 |             [01;31m[Kscore_[m[K += 10;
+      |             [01;31m[K^~~~~~[m[K
+      |             [32m[Kscore[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1958:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kscore_[m[K’ was not declared in this scope; did you mean ‘[01m[Kscore[m[K’?
+ 1958 |             [01;31m[Kscore_[m[K += 8;
+      |             [01;31m[K^~~~~~[m[K
+      |             [32m[Kscore[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1961:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kscore_[m[K’ was not declared in this scope; did you mean ‘[01m[Kscore[m[K’?
+ 1961 |             [01;31m[Kscore_[m[K += 3;
+      |             [01;31m[K^~~~~~[m[K
+      |             [32m[Kscore[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1970:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kmonsters_[m[K’ was not declared in this scope; did you mean ‘[01m[KMonster[m[K’?
+ 1970 |       for (Monster & m : [01;31m[Kmonsters_[m[K) {
+      |                          [01;31m[K^~~~~~~~~[m[K
+      |                          [32m[KMonster[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1980:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kbullets_[m[K’ was not declared in this scope; did you mean ‘[01m[KBullet[m[K’?
+ 1980 |     [01;31m[Kbullets_[m[K.erase(
+      |     [01;31m[K^~~~~~~~[m[K
+      |     [32m[KBullet[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KkillMonster[m[K({anonymous}::Monster&)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2009:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kspawn_dead_[m[K’ was not declared in this scope
+ 2009 |     [01;31m[Kspawn_dead_[m[K[m.spawnId] = 1;
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2010:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kkills_[m[K’ was not declared in this scope; did you mean ‘[01m[Kkillpg[m[K’?
+ 2010 |     ++[01;31m[Kkills_[m[K;
+      |       [01;31m[K^~~~~~[m[K
+      |       [32m[Kkillpg[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2012:32:[m[K [01;31m[Kerror: [m[K‘[01m[Kscore_[m[K’ was not declared in this scope; did you mean ‘[01m[Kscore[m[K’?
+ 2012 |       case MonsterType::ZOMBI: [01;31m[Kscore_[m[K += isRanged(m) ? 20 : 10; break;
+      |                                [01;31m[K^~~~~~[m[K
+      |                                [32m[Kscore[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2021:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kshake_[m[K’ was not declared in this scope
+ 2021 |     [01;31m[Kshake_[m[K = std::max(shake_, m.type == MonsterType::BRUTO ? 10.0 : 4.0);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kbool {anonymous}::Game::[01;32m[KtouchesPlayer[m[K({anonymous}::Vec2, double) const[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2027:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2027 |     const Vec2 pts[] = {[01;31m[Kmoto_[m[K.mid(), moto_.front.p, moto_.rear.p, pose_.head, pose_.hip};
+      |                         [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2027:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_[m[K’ was not declared in this scope
+ 2027 |     const Vec2 pts[] = {moto_.mid(), moto_.front.p, moto_.rear.p, [01;31m[Kpose_[m[K.head, pose_.hip};
+      |                                                                   [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KhurtPlayer[m[K(double, {anonymous}::Vec2)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2037:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kinvuln_[m[K’ was not declared in this scope
+ 2037 |     if ([01;31m[Kinvuln_[m[K > 0.0) {return;}                // tras un golpe eres inmune un momento
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2038:5:[m[K [01;31m[Kerror: [m[K‘[01m[Khealth_[m[K’ was not declared in this scope; did you mean ‘[01m[Khealth[m[K’?
+ 2038 |     [01;31m[Khealth_[m[K -= dmg;
+      |     [01;31m[K^~~~~~~[m[K
+      |     [32m[Khealth[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2039:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kinvuln_[m[K’ was not declared in this scope
+ 2039 |     [01;31m[Kinvuln_[m[K = 1.1;
+      |     [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2040:5:[m[K [01;31m[Kerror: [m[K‘[01m[Khurt_flash_[m[K’ was not declared in this scope
+ 2040 |     [01;31m[Khurt_flash_[m[K = 0.35;
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2041:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kshake_[m[K’ was not declared in this scope
+ 2041 |     [01;31m[Kshake_[m[K = std::max(shake_, 9.0);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2042:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2042 |     const Vec2 away = normalized([01;31m[Kmoto_[m[K.mid() - from);
+      |                                  [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KmessiKick[m[K({anonymous}::Monster&)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2057:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2057 |     const double T = std::clamp(std::fabs([01;31m[Kmoto_[m[K.mid().x - start.x) / 500.0, 0.55, 1.4);
+      |                                           [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2063:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kballs_[m[K’ was not declared in this scope; did you mean ‘[01m[KBall[m[K’?
+ 2063 |     [01;31m[Kballs_[m[K.push_back(b);
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[KBall[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KenemyShoot[m[K({anonymous}::Monster&)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2074:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2074 |     const Vec2 tgt = [01;31m[Kmoto_[m[K.mid();
+      |                      [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2082:5:[m[K [01;31m[Kerror: [m[K‘[01m[KenemyBullets_[m[K’ was not declared in this scope
+ 2082 |     [01;31m[KenemyBullets_[m[K.push_back(b);
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[K{anonymous}::Vec2 {anonymous}::Game::[01;32m[KleadAim[m[K({anonymous}::Vec2, double, double) const[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2094:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2094 |     const Vec2 tgt = [01;31m[Kmoto_[m[K.mid();
+      |                      [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KpushShot[m[K({anonymous}::ShotKind, {anonymous}::Vec2, {anonymous}::Vec2, double, double)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2107:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kshots_[m[K’ was not declared in this scope; did you mean ‘[01m[KShot[m[K’?
+ 2107 |     [01;31m[Kshots_[m[K.push_back(s);
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[KShot[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KthrowGrenade[m[K({anonymous}::Monster&)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2144:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2144 |     const double T = std::clamp(std::fabs([01;31m[Kmoto_[m[K.mid().x - start.x) / 450.0, 0.7, 1.5);
+      |                                           [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[Kexplode[m[K({anonymous}::Vec2, double, double)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2179:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kblasts_[m[K’ was not declared in this scope; did you mean ‘[01m[KBlast[m[K’?
+ 2179 |     [01;31m[Kblasts_[m[K.push_back(b);
+      |     [01;31m[K^~~~~~~[m[K
+      |     [32m[KBlast[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2180:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kshake_[m[K’ was not declared in this scope
+ 2180 |     [01;31m[Kshake_[m[K = std::max(shake_, 12.0);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2181:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2181 |     const double d = std::min(len([01;31m[Kmoto_[m[K.mid() - p), len(pose_.hip - p));
+      |                                   [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2181:57:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_[m[K’ was not declared in this scope
+ 2181 |     const double d = std::min(len(moto_.mid() - p), len([01;31m[Kpose_[m[K.hip - p));
+      |                                                         [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KhurtByBullet[m[K(double, {anonymous}::Vec2)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2191:9:[m[K [01;31m[Kerror: [m[K‘[01m[KspawnGrace_[m[K’ was not declared in this scope
+ 2191 |     if ([01;31m[KspawnGrace_[m[K > 0.0) {return;}
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2192:5:[m[K [01;31m[Kerror: [m[K‘[01m[Khealth_[m[K’ was not declared in this scope; did you mean ‘[01m[Khealth[m[K’?
+ 2192 |     [01;31m[Khealth_[m[K -= dmg;
+      |     [01;31m[K^~~~~~~[m[K
+      |     [32m[Khealth[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2193:5:[m[K [01;31m[Kerror: [m[K‘[01m[Khurt_flash_[m[K’ was not declared in this scope
+ 2193 |     [01;31m[Khurt_flash_[m[K = std::max(hurt_flash_, 0.12);
+      |     [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2194:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kshake_[m[K’ was not declared in this scope
+ 2194 |     [01;31m[Kshake_[m[K = std::max(shake_, 3.0);
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2195:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2195 |     [01;31m[Kmoto_[m[K.addVelocity({normalized(moto_.mid() - from).x * 25.0, 0.0});
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateEnemyBullets[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2202:23:[m[K [01;31m[Kerror: [m[K‘[01m[KenemyBullets_[m[K’ was not declared in this scope
+ 2202 |     for (Bullet & b : [01;31m[KenemyBullets_[m[K) {
+      |                       [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2205:19:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2205 |       if (b.p.y > [01;31m[Ktrack_[m[K.at(b.p.x)) {
+      |                   [01;31m[K^~~~~~[m[K
+      |                   [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2215:5:[m[K [01;31m[Kerror: [m[K‘[01m[KenemyBullets_[m[K’ was not declared in this scope
+ 2215 |     [01;31m[KenemyBullets_[m[K.erase(
+      |     [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateShots[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2223:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kshots_[m[K’ was not declared in this scope; did you mean ‘[01m[KShot[m[K’?
+ 2223 |     for (Shot & s : [01;31m[Kshots_[m[K) {
+      |                     [01;31m[K^~~~~~[m[K
+      |                     [32m[KShot[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2232:31:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2232 |             const double gy = [01;31m[Ktrack_[m[K.at(s.p.x);
+      |                               [01;31m[K^~~~~~[m[K
+      |                               [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2250:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2250 |             if (s.p.y > [01;31m[Ktrack_[m[K.at(s.p.x) || touchesPlayer(s.p, shotRadius(s.kind))) {
+      |                         [01;31m[K^~~~~~[m[K
+      |                         [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2260:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2260 |             if (s.p.y > [01;31m[Ktrack_[m[K.at(s.p.x)) {
+      |                         [01;31m[K^~~~~~[m[K
+      |                         [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2276:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2276 |             if (s.p.y > [01;31m[Ktrack_[m[K.at(s.p.x)) {
+      |                         [01;31m[K^~~~~~[m[K
+      |                         [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2288:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2288 |       if (s.p.x < [01;31m[Kmoto_[m[K.mid().x - 1500.0) {s.life = 0.0;}   // quedo muy atras: lo borramos
+      |                   [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2290:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kshots_[m[K’ was not declared in this scope; did you mean ‘[01m[KShot[m[K’?
+ 2290 |     [01;31m[Kshots_[m[K.erase(
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[KShot[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateBlasts[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2298:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kblasts_[m[K’ was not declared in this scope; did you mean ‘[01m[KBlast[m[K’?
+ 2298 |     for (Blast & b : [01;31m[Kblasts_[m[K) {b.t -= DT;}
+      |                      [01;31m[K^~~~~~~[m[K
+      |                      [32m[KBlast[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2299:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kblasts_[m[K’ was not declared in this scope; did you mean ‘[01m[KBlast[m[K’?
+ 2299 |     [01;31m[Kblasts_[m[K.erase(
+      |     [01;31m[K^~~~~~~[m[K
+      |     [32m[KBlast[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateBalls[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2307:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kballs_[m[K’ was not declared in this scope; did you mean ‘[01m[KBall[m[K’?
+ 2307 |     for (Ball & b : [01;31m[Kballs_[m[K) {
+      |                     [01;31m[K^~~~~~[m[K
+      |                     [32m[KBall[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2314:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2314 |       const double gy = [01;31m[Ktrack_[m[K.at(b.p.x);
+      |                         [01;31m[K^~~~~~[m[K
+      |                         [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2323:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2323 |       if (b.p.x < [01;31m[Kmoto_[m[K.mid().x - 1500.0) {b.life = 0.0;}
+      |                   [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2326:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kinvuln_[m[K’ was not declared in this scope
+ 2326 |       if (b.life > 0.0 && [01;31m[Kinvuln_[m[K <= 0.0 && touchesPlayer(b.p, BALL_R)) {
+      |                           [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2332:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kballs_[m[K’ was not declared in this scope; did you mean ‘[01m[KBall[m[K’?
+ 2332 |     [01;31m[Kballs_[m[K.erase(
+      |     [01;31m[K^~~~~~[m[K
+      |     [32m[KBall[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateRanged[m[K({anonymous}::Monster&, double, {anonymous}::Vec2)[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2353:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2353 |     m.p.y = [01;31m[Ktrack_[m[K.at(m.p.x);
+      |             [01;31m[K^~~~~~[m[K
+      |             [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateMonsters[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2391:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2391 |     const Vec2 target = [01;31m[Kmoto_[m[K.mid();
+      |                         [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2393:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kmonsters_[m[K’ was not declared in this scope; did you mean ‘[01m[KMonster[m[K’?
+ 2393 |     for (Monster & m : [01;31m[Kmonsters_[m[K) {
+      |                        [01;31m[K^~~~~~~~~[m[K
+      |                        [32m[KMonster[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2413:66:[m[K [01;31m[Kerror: [m[K‘[01m[Ktime_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimex[m[K’?
+ 2413 |         const double wantedY = target.y - 70.0 + 55.0 * std::sin([01;31m[Ktime_[m[K * 2.2 + m.spawnId);
+      |                                                                  [01;31m[K^~~~~[m[K
+      |                                                                  [32m[Ktimex[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2415:33:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2415 |         m.p.y = std::min(m.p.y, [01;31m[Ktrack_[m[K.at(m.p.x) - 20.0);   // no atravesar el suelo
+      |                                 [01;31m[K^~~~~~[m[K
+      |                                 [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2422:67:[m[K [01;31m[Kerror: [m[K‘[01m[Ktime_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimex[m[K’?
+ 2422 |         const double wantedY = target.y - 170.0 + 45.0 * std::sin([01;31m[Ktime_[m[K * 1.7 + m.spawnId);
+      |                                                                   [01;31m[K^~~~~[m[K
+      |                                                                   [32m[Ktimex[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2424:33:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2424 |         m.p.y = std::min(m.p.y, [01;31m[Ktrack_[m[K.at(m.p.x) - 40.0);   // no atravesar el suelo
+      |                                 [01;31m[K^~~~~~[m[K
+      |                                 [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2447:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2447 |         m.p.y = [01;31m[Ktrack_[m[K.at(m.p.x);
+      |                 [01;31m[K^~~~~~[m[K
+      |                 [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2460:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2460 |         m.p.y = [01;31m[Ktrack_[m[K.at(m.p.x);
+      |                 [01;31m[K^~~~~~[m[K
+      |                 [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2486:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2486 |         m.p.y = [01;31m[Ktrack_[m[K.at(m.p.x);
+      |                 [01;31m[K^~~~~~[m[K
+      |                 [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2506:17:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2506 |         m.p.y = [01;31m[Ktrack_[m[K.at(m.p.x);
+      |                 [01;31m[K^~~~~~[m[K
+      |                 [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2519:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kspawn_dead_[m[K’ was not declared in this scope
+ 2519 |           [01;31m[Kspawn_dead_[m[K[m.spawnId] = 1;
+      |           [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2529:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kmonsters_[m[K’ was not declared in this scope; did you mean ‘[01m[KMonster[m[K’?
+ 2529 |     [01;31m[Kmonsters_[m[K.erase(
+      |     [01;31m[K^~~~~~~~~[m[K
+      |     [32m[KMonster[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KcollectPickups[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2536:20:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2536 |     const Vec2 m = [01;31m[Kmoto_[m[K.mid();
+      |                    [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2537:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kpickups_[m[K’ was not declared in this scope; did you mean ‘[01m[KPickup[m[K’?
+ 2537 |     for (Pickup & p : [01;31m[Kpickups_[m[K) {
+      |                       [01;31m[K^~~~~~~~[m[K
+      |                       [32m[KPickup[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2541:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kammo_[m[K’ was not declared in this scope
+ 2541 |         [01;31m[Kammo_[m[K = std::min(MAX_AMMO, ammo_ + 15);
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2542:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbanner_[m[K’ was not declared in this scope
+ 2542 |         [01;31m[Kbanner_[m[K = "+15 BALAS";
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2544:9:[m[K [01;31m[Kerror: [m[K‘[01m[Khealth_[m[K’ was not declared in this scope; did you mean ‘[01m[Khealth[m[K’?
+ 2544 |         [01;31m[Khealth_[m[K = std::min(MAX_HEALTH, health_ + 35.0);
+      |         [01;31m[K^~~~~~~[m[K
+      |         [32m[Khealth[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2545:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbanner_[m[K’ was not declared in this scope
+ 2545 |         [01;31m[Kbanner_[m[K = "+35 VIDA";
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2547:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kbanner_t_[m[K’ was not declared in this scope
+ 2547 |       [01;31m[Kbanner_t_[m[K = 1.0;
+      |       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateCheckpoints[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2559:11:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2559 |       if ([01;31m[Kmoto_[m[K.mid().x > cx && cx > checkpoint_x_) {
+      |           [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2559:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kcheckpoint_x_[m[K’ was not declared in this scope; did you mean ‘[01m[KcheckpointX[m[K’?
+ 2559 |       if (moto_.mid().x > cx && cx > [01;31m[Kcheckpoint_x_[m[K) {
+      |                                      [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                      [32m[KcheckpointX[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2561:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbanner_[m[K’ was not declared in this scope
+ 2561 |         [01;31m[Kbanner_[m[K = "CHECKPOINT!";
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2562:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbanner_t_[m[K’ was not declared in this scope
+ 2562 |         [01;31m[Kbanner_t_[m[K = 2.0;
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KcheckEnd[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2569:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_[m[K’ was not declared in this scope
+ 2569 |     const bool headHit = [01;31m[Kpose_[m[K.head.y + 9.0 > track_.at(pose_.head.x);
+      |                          [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2569:47:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2569 |     const bool headHit = pose_.head.y + 9.0 > [01;31m[Ktrack_[m[K.at(pose_.head.x);
+      |                                               [01;31m[K^~~~~~[m[K
+      |                                               [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2571:9:[m[K [01;31m[Kerror: [m[K‘[01m[Khealth_[m[K’ was not declared in this scope; did you mean ‘[01m[Khealth[m[K’?
+ 2571 |     if ([01;31m[Khealth_[m[K <= 0.0) {
+      |         [01;31m[K^~~~~~~[m[K
+      |         [32m[Khealth[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2572:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_[m[K’ was not declared in this scope; did you mean ‘[01m[KState[m[K’?
+ 2572 |       [01;31m[Kstate_[m[K = State::CRASHED;
+      |       [01;31m[K^~~~~~[m[K
+      |       [32m[KState[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2573:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_timer_[m[K’ was not declared in this scope
+ 2573 |       [01;31m[Kstate_timer_[m[K = 3.0;
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2574:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kdeath_msg_[m[K’ was not declared in this scope
+ 2574 |       [01;31m[Kdeath_msg_[m[K = "TE MATARON!";
+      |       [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2577:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kshake_[m[K’ was not declared in this scope
+ 2577 |       [01;31m[Kshake_[m[K = 16.0;
+      |       [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2578:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2578 |     } else if (headHit || hipHit || [01;31m[Kmoto_[m[K.rear.p.x < 0.0) {
+      |                                     [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2579:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_[m[K’ was not declared in this scope; did you mean ‘[01m[KState[m[K’?
+ 2579 |       [01;31m[Kstate_[m[K = State::CRASHED;
+      |       [01;31m[K^~~~~~[m[K
+      |       [32m[KState[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2580:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_timer_[m[K’ was not declared in this scope
+ 2580 |       [01;31m[Kstate_timer_[m[K = 3.0;
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2581:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kdeath_msg_[m[K’ was not declared in this scope
+ 2581 |       [01;31m[Kdeath_msg_[m[K = "TE CAISTE!";
+      |       [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2586:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kshake_[m[K’ was not declared in this scope
+ 2586 |       [01;31m[Kshake_[m[K = 16.0;
+      |       [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2588:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_[m[K’ was not declared in this scope; did you mean ‘[01m[KState[m[K’?
+ 2588 |       [01;31m[Kstate_[m[K = State::FINISHED;
+      |       [01;31m[K^~~~~~[m[K
+      |       [32m[KState[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2589:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_timer_[m[K’ was not declared in this scope
+ 2589 |       [01;31m[Kstate_timer_[m[K = 0.0;
+      |       [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2590:7:[m[K [01;31m[Kerror: [m[K‘[01m[KfinishT_[m[K’ was not declared in this scope
+ 2590 |       [01;31m[KfinishT_[m[K = 0.0;
+      |       [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2591:7:[m[K [01;31m[Kerror: [m[K‘[01m[KriderOff_[m[K’ was not declared in this scope
+ 2591 |       [01;31m[KriderOff_[m[K = false;
+      |       [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2592:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kdancing_[m[K’ was not declared in this scope
+ 2592 |       [01;31m[Kdancing_[m[K = false;
+      |       [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2593:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kscore_[m[K’ was not declared in this scope; did you mean ‘[01m[Kscore[m[K’?
+ 2593 |       [01;31m[Kscore_[m[K += static_cast<int>(health_);              // bono por la vida que te queda
+      |       [01;31m[K^~~~~~[m[K
+      |       [32m[Kscore[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2595:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kmonsters_[m[K’ was not declared in this scope; did you mean ‘[01m[KMonster[m[K’?
+ 2595 |       [01;31m[Kmonsters_[m[K.clear();
+      |       [01;31m[K^~~~~~~~~[m[K
+      |       [32m[KMonster[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2596:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kbullets_[m[K’ was not declared in this scope; did you mean ‘[01m[KBullet[m[K’?
+ 2596 |       [01;31m[Kbullets_[m[K.clear();
+      |       [01;31m[K^~~~~~~~[m[K
+      |       [32m[KBullet[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2597:7:[m[K [01;31m[Kerror: [m[K‘[01m[KenemyBullets_[m[K’ was not declared in this scope
+ 2597 |       [01;31m[KenemyBullets_[m[K.clear();
+      |       [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2598:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kballs_[m[K’ was not declared in this scope; did you mean ‘[01m[KBall[m[K’?
+ 2598 |       [01;31m[Kballs_[m[K.clear();
+      |       [01;31m[K^~~~~~[m[K
+      |       [32m[KBall[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2599:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kshots_[m[K’ was not declared in this scope; did you mean ‘[01m[KShot[m[K’?
+ 2599 |       [01;31m[Kshots_[m[K.clear();
+      |       [01;31m[K^~~~~~[m[K
+      |       [32m[KShot[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateFinishScene[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2613:5:[m[K [01;31m[Kerror: [m[K‘[01m[KfinishT_[m[K’ was not declared in this scope
+ 2613 |     [01;31m[KfinishT_[m[K += DT;
+      |     [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2614:10:[m[K [01;31m[Kerror: [m[K‘[01m[KriderOff_[m[K’ was not declared in this scope
+ 2614 |     if (![01;31m[KriderOff_[m[K) {
+      |          [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2616:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2616 |       if (len([01;31m[Kmoto_[m[K.velocity()) < 40.0 || finishT_ > 3.0) {
+      |               [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2618:9:[m[K [01;31m[Kerror: [m[K‘[01m[KoffT_[m[K’ was not declared in this scope
+ 2618 |         [01;31m[KoffT_[m[K = 0.0;
+      |         [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2619:9:[m[K [01;31m[Kerror: [m[K‘[01m[KoffFromX_[m[K’ was not declared in this scope
+ 2619 |         [01;31m[KoffFromX_[m[K = pose_.hip.x;
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2619:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_[m[K’ was not declared in this scope
+ 2619 |         offFromX_ = [01;31m[Kpose_[m[K.hip.x;
+      |                     [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2620:9:[m[K [01;31m[Kerror: [m[K‘[01m[KoffFromY_[m[K’ was not declared in this scope
+ 2620 |         [01;31m[KoffFromY_[m[K = pose_.foot.y;
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2621:9:[m[K [01;31m[Kerror: [m[K‘[01m[KdanceX_[m[K’ was not declared in this scope
+ 2621 |         [01;31m[KdanceX_[m[K = std::min(moto_.mid().x + 170.0, TRACK_LEN - 120.0);
+      |         [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2622:9:[m[K [01;31m[Kerror: [m[K‘[01m[KwalkerX_[m[K’ was not declared in this scope
+ 2622 |         [01;31m[KwalkerX_[m[K = offFromX_;
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2623:9:[m[K [01;31m[Kerror: [m[K‘[01m[KdancerX_[m[K’ was not declared in this scope
+ 2623 |         [01;31m[KdancerX_[m[K = danceX_ + 560.0;
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2624:9:[m[K [01;31m[Kerror: [m[K‘[01m[KmanPh_[m[K’ was not declared in this scope
+ 2624 |         [01;31m[KmanPh_[m[K = 0.0;
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2625:9:[m[K [01;31m[Kerror: [m[K‘[01m[KwomanPh_[m[K’ was not declared in this scope
+ 2625 |         [01;31m[KwomanPh_[m[K = 0.0;
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2629:5:[m[K [01;31m[Kerror: [m[K‘[01m[KoffT_[m[K’ was not declared in this scope
+ 2629 |     [01;31m[KoffT_[m[K += DT;
+      |     [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2630:28:[m[K [01;31m[Kerror: [m[K‘[01m[KdanceX_[m[K’ was not declared in this scope
+ 2630 |     const double manStop = [01;31m[KdanceX_[m[K - 26.0;       // donde se queda parado el piloto
+      |                            [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2635:7:[m[K [01;31m[Kerror: [m[K‘[01m[KwalkerX_[m[K’ was not declared in this scope
+ 2635 |       [01;31m[KwalkerX_[m[K = offFromX_ + 28.0 * (offT_ / 0.45);
+      |       [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2635:18:[m[K [01;31m[Kerror: [m[K‘[01m[KoffFromX_[m[K’ was not declared in this scope
+ 2635 |       walkerX_ = [01;31m[KoffFromX_[m[K + 28.0 * (offT_ / 0.45);
+      |                  [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2637:34:[m[K [01;31m[Kerror: [m[K‘[01m[KwalkerX_[m[K’ was not declared in this scope
+ 2637 |       const double d = manStop - [01;31m[KwalkerX_[m[K;
+      |                                  [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2640:9:[m[K [01;31m[Kerror: [m[K‘[01m[KmanPh_[m[K’ was not declared in this scope
+ 2640 |         [01;31m[KmanPh_[m[K += DT * 11.0;
+      |         [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2644:36:[m[K [01;31m[Kerror: [m[K‘[01m[KdancerX_[m[K’ was not declared in this scope
+ 2644 |       const double d = womanStop - [01;31m[KdancerX_[m[K;
+      |                                    [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2647:9:[m[K [01;31m[Kerror: [m[K‘[01m[KwomanPh_[m[K’ was not declared in this scope
+ 2647 |         [01;31m[KwomanPh_[m[K += DT * 11.0;
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2651:61:[m[K [01;31m[Kerror: [m[K‘[01m[KwalkerX_[m[K’ was not declared in this scope
+ 2651 |     const bool arrived = offT_ > 0.5 && std::fabs(manStop - [01;31m[KwalkerX_[m[K) <= 2.0 &&
+      |                                                             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2652:29:[m[K [01;31m[Kerror: [m[K‘[01m[KdancerX_[m[K’ was not declared in this scope
+ 2652 |       std::fabs(womanStop - [01;31m[KdancerX_[m[K) <= 2.0;
+      |                             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2654:12:[m[K [01;31m[Kerror: [m[K‘[01m[Kdancing_[m[K’ was not declared in this scope
+ 2654 |       if (![01;31m[Kdancing_[m[K) {dancing_ = true; danceT_ = 0.0;}
+      |            [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2654:40:[m[K [01;31m[Kerror: [m[K‘[01m[KdanceT_[m[K’ was not declared in this scope
+ 2654 |       if (!dancing_) {dancing_ = true; [01;31m[KdanceT_[m[K = 0.0;}
+      |                                        [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2655:7:[m[K [01;31m[Kerror: [m[K‘[01m[KdanceT_[m[K’ was not declared in this scope
+ 2655 |       [01;31m[KdanceT_[m[K += DT;
+      |       [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2661:45:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2661 |         emit({danceX_ + rnd(-140.0, 140.0), [01;31m[Ktrack_[m[K.at(danceX_) - 190.0 + rnd(-30.0, 30.0)}, 1, PI / 2.0, 0.7,
+      |                                             [01;31m[K^~~~~~[m[K
+      |                                             [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2661:13:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[K{anonymous}::Vec2[m[K’
+ 2661 |         [01;31m[Kemit({danceX_ + rnd(-140.0, 140.0), track_.at(danceX_) - 190.0 + rnd(-30.0, 30.0)}, 1, PI / 2.0, 0.7,[m[K
+      |         [01;31m[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ 2662 | [01;31m[K          70.0, pal[static_cast<int>(rnd(0.0, 4.99))], 1.6, 3.0, 90.0)[m[K;
+      |           [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1771:10:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid {anonymous}::Game::[01;32m[Kemit[m[K({anonymous}::Vec2, int, double, double, double, {anonymous}::Color, double, double, double, double, bool)[m[K’
+ 1771 |     [01;36m[KVec2 pos[m[K, int count, double angle, double spread, double speed, Color col, double life,
+      |     [01;36m[K~~~~~^~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2665:10:[m[K [01;31m[Kerror: [m[K‘[01m[Kdancing_[m[K’ was not declared in this scope
+ 2665 |     if (([01;31m[Kdancing_[m[K && danceT_ > DANCE_TIME) || finishT_ > 45.0) {restartAll();}
+      |          [01;31m[K^~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2665:22:[m[K [01;31m[Kerror: [m[K‘[01m[KdanceT_[m[K’ was not declared in this scope
+ 2665 |     if ((dancing_ && [01;31m[KdanceT_[m[K > DANCE_TIME) || finishT_ > 45.0) {restartAll();}
+      |                      [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateFx[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2670:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kfx_[m[K’ was not declared in this scope
+ 2670 |     for (Fx & f : [01;31m[Kfx_[m[K) {
+      |                   [01;31m[K^~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2676:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kfx_[m[K’ was not declared in this scope
+ 2676 |     [01;31m[Kfx_[m[K.erase(std::remove_if(fx_.begin(), fx_.end(), [](const Fx & f) {return f.life <= 0.0;}), fx_.end());
+      |     [01;31m[K^~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2679:28:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2679 |     for (const Decor & d : [01;31m[Ktrack_[m[K.decor()) {
+      |                            [01;31m[K^~~~~~[m[K
+      |                            [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2681:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2681 |       if (std::fabs(d.x - [01;31m[Kmoto_[m[K.mid().x) > 900.0) {continue;}
+      |                           [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2683:13:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[K{anonymous}::Vec2[m[K’
+ 2683 |         [01;31m[Kemit({d.x + rnd(-6, 6), track_.at(d.x) - 38.0}, 1, -PI / 2.0, 0.4, 70.0, rgb(255, 160, 50), 1.2, 2.0, -20.0)[m[K;
+      |         [01;31m[K~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1771:10:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid {anonymous}::Game::[01;32m[Kemit[m[K({anonymous}::Vec2, int, double, double, double, {anonymous}::Color, double, double, double, double, bool)[m[K’
+ 1771 |     [01;36m[KVec2 pos[m[K, int count, double angle, double spread, double speed, Color col, double life,
+      |     [01;36m[K~~~~~^~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KnetExchange[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2694:10:[m[K [01;31m[Kerror: [m[K‘[01m[KnetOn_[m[K’ was not declared in this scope
+ 2694 |     if (![01;31m[KnetOn_[m[K) {return;}
+      |          [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2697:15:[m[K [01;31m[Kerror: [m[K‘[01m[KnetSeq_[m[K’ was not declared in this scope
+ 2697 |     s.seq = ++[01;31m[KnetSeq_[m[K;
+      |               [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2698:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2698 |     s.rx = static_cast<float>([01;31m[Kmoto_[m[K.rear.p.x);  s.ry = static_cast<float>(moto_.rear.p.y);
+      |                               [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2701:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kaim_[m[K’ was not declared in this scope
+ 2701 |     s.aimX = static_cast<float>([01;31m[Kaim_[m[K.x);        s.aimY = static_cast<float>(aim_.y);
+      |                                 [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2703:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_[m[K’ was not declared in this scope; did you mean ‘[01m[KState[m[K’?
+ 2703 |     s.dead = [01;31m[Kstate_[m[K == State::CRASHED;
+      |              [01;31m[K^~~~~~[m[K
+      |              [32m[KState[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2704:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kin_[m[K’ was not declared in this scope; did you mean ‘[01m[Kint[m[K’?
+ 2704 |     s.fire = [01;31m[Kin_[m[K.fire && ammo_ > 0 && state_ == State::RUNNING;
+      |              [01;31m[K^~~[m[K
+      |              [32m[Kint[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2704:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kammo_[m[K’ was not declared in this scope
+ 2704 |     s.fire = in_.fire && [01;31m[Kammo_[m[K > 0 && state_ == State::RUNNING;
+      |                          [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2705:5:[m[K [01;31m[Kerror: [m[K‘[01m[Knet_[m[K’ was not declared in this scope
+ 2705 |     [01;31m[Knet_[m[K.send(s);
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2711:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kremote_[m[K’ was not declared in this scope; did you mean ‘[01m[Kremove[m[K’?
+ 2711 |       if (r.magic != NET_MAGIC || static_cast<int32_t>(r.seq - [01;31m[Kremote_[m[K.lastSeq) <= 0) {continue;}
+      |                                                                [01;31m[K^~~~~~~[m[K
+      |                                                                [32m[Kremove[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2712:7:[m[K [01;31m[Kerror: [m[K‘[01m[Kremote_[m[K’ was not declared in this scope; did you mean ‘[01m[Kremove[m[K’?
+ 2712 |       [01;31m[Kremote_[m[K.lastSeq = r.seq;
+      |       [01;31m[K^~~~~~~[m[K
+      |       [32m[Kremove[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2729:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbullets_[m[K’ was not declared in this scope; did you mean ‘[01m[KBullet[m[K’?
+ 2729 |         [01;31m[Kbullets_[m[K.push_back(b);
+      |         [01;31m[K^~~~~~~~[m[K
+      |         [32m[KBullet[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2734:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kremote_[m[K’ was not declared in this scope; did you mean ‘[01m[Kremove[m[K’?
+ 2734 |     if ([01;31m[Kremote_[m[K.active && now - remote_.last > std::chrono::seconds(2)) {remote_.active = false;}
+      |         [01;31m[K^~~~~~~[m[K
+      |         [32m[Kremove[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K In member function ‘[01m[Kvoid {anonymous}::Game::[01;32m[KupdateCamera[m[K()[m[K’:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2741:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_[m[K’ was not declared in this scope; did you mean ‘[01m[KState[m[K’?
+ 2741 |     const bool crashed = [01;31m[Kstate_[m[K == State::CRASHED;
+      |                          [01;31m[K^~~~~~[m[K
+      |                          [32m[KState[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2742:56:[m[K [01;31m[Kerror: [m[K‘[01m[KriderOff_[m[K’ was not declared in this scope
+ 2742 |     const bool danceCam = state_ == State::FINISHED && [01;31m[KriderOff_[m[K;
+      |                                                        [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2743:24:[m[K [01;31m[Kerror: [m[K‘[01m[Krag_[m[K’ was not declared in this scope
+ 2743 |     Vec2 m = crashed ? [01;31m[Krag_[m[K[R_HIP].p : moto_.mid();
+      |                        [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2743:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kmoto_[m[K’ was not declared in this scope
+ 2743 |     Vec2 m = crashed ? rag_[R_HIP].p : [01;31m[Kmoto_[m[K.mid();
+      |                                        [01;31m[K^~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2746:12:[m[K [01;31m[Kerror: [m[K‘[01m[KdanceX_[m[K’ was not declared in this scope
+ 2746 |       m = {[01;31m[KdanceX_[m[K, track_.at(danceX_) - 60.0};
+      |            [01;31m[K^~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2746:21:[m[K [01;31m[Kerror: [m[K‘[01m[Ktrack_[m[K’ was not declared in this scope; did you mean ‘[01m[KTrack[m[K’?
+ 2746 |       m = {danceX_, [01;31m[Ktrack_[m[K.at(danceX_) - 60.0};
+      |                     [01;31m[K^~~~~~[m[K
+      |                     [32m[KTrack[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2746:46:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[K{anonymous}::Vec2[m[K’ and ‘[01m[K<brace-enclosed initializer list>[m[K’)
+ 2746 |       m = {danceX_, track_.at(danceX_) - 60.0[01;31m[K}[m[K;
+      |                                              [01;31m[K^[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr {anonymous}::Vec2& {anonymous}::Vec2::[01;32m[Koperator=[m[K(const {anonymous}::Vec2&)[m[K’
+  300 | struct [01;36m[KVec2[m[K
+      |        [01;36m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[Kconst {anonymous}::Vec2&[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kconstexpr {anonymous}::Vec2& {anonymous}::Vec2::[01;32m[Koperator=[m[K({anonymous}::Vec2&&)[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:300:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K<brace-enclosed initializer list>[m[K’ to ‘[01m[K{anonymous}::Vec2&&[m[K’
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2752:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kcam_[m[K’ was not declared in this scope
+ 2752 |     [01;31m[Kcam_[m[K.x += (tx - cam_.x) * 0.12;      // la camara "persigue" suavemente a la moto
+      |     [01;31m[K^~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2754:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kshake_[m[K’ was not declared in this scope
+ 2754 |     [01;31m[Kshake_[m[K *= 0.88;                      // el temblor se va apagando
+      |     [01;31m[K^~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2756:5:[m[K [01;31m[Kerror: [m[K‘[01m[KshakeOff_[m[K’ was not declared in this scope
+ 2756 |     [01;31m[KshakeOff_[m[K = {rnd(-1.0, 1.0) * shake_, rnd(-1.0, 1.0) * shake_};
+      |     [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:[m[K At global scope:
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2757:4:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+ 2757 |   }
+      |    [01;31m[K^[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:2757:4:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:200:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+  200 | [01;36m[K{[m[K
+      | [01;36m[K^[m[K
+[01m[K/home/cuellarmaster/Bike/src/bike_game/src/bike_game.cpp:1009:6:[m[K [01;35m[Kwarning: [m[K‘[01m[K{anonymous}::Pose {anonymous}::[01;32m[KmakePose[m[K(const Moto&, Vec2)[m[K’ defined but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-function-Wunused-function]8;;[m[K]
+ 1009 | Pose [01;35m[KmakePose[m[K(const Moto & m, Vec2 aim)
+      |      [01;35m[K^~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/bike_game.dir/build.make:76: CMakeFiles/bike_game.dir/src/bike_game.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bike_game.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

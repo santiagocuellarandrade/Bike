@@ -1,0 +1,26 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/bike_game.dir/src/bike_game.cpp.o[0m
+[100%] [32m[1mLinking CXX executable bike_game[0m
+/usr/bin/ld: CMakeFiles/bike_game.dir/src/bike_game.cpp.o: in function `(anonymous namespace)::Net::~Net()':
+bike_game.cpp:(.text+0x13b5): undefined reference to `SDLNet_FreePacket'
+/usr/bin/ld: bike_game.cpp:(.text+0x13d2): undefined reference to `SDLNet_FreePacket'
+/usr/bin/ld: bike_game.cpp:(.text+0x13ed): undefined reference to `SDLNet_UDP_Close'
+/usr/bin/ld: bike_game.cpp:(.text+0x13fe): undefined reference to `SDLNet_Quit'
+/usr/bin/ld: CMakeFiles/bike_game.dir/src/bike_game.cpp.o: in function `(anonymous namespace)::Net::host(int)':
+bike_game.cpp:(.text._ZN12_GLOBAL__N_13Net4hostEi[_ZN12MotoGameNodeC5Ev]+0x28): undefined reference to `SDLNet_UDP_Open'
+/usr/bin/ld: CMakeFiles/bike_game.dir/src/bike_game.cpp.o: in function `(anonymous namespace)::Net::join(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)':
+bike_game.cpp:(.text._ZN12_GLOBAL__N_13Net4joinERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN12MotoGameNodeC5Ev]+0x34): undefined reference to `SDLNet_UDP_Open'
+/usr/bin/ld: bike_game.cpp:(.text._ZN12_GLOBAL__N_13Net4joinERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN12MotoGameNodeC5Ev]+0x78): undefined reference to `SDLNet_ResolveHost'
+/usr/bin/ld: CMakeFiles/bike_game.dir/src/bike_game.cpp.o: in function `(anonymous namespace)::Net::send((anonymous namespace)::NetState const&)':
+bike_game.cpp:(.text._ZN12_GLOBAL__N_13Net4sendERKNS_8NetStateE[_ZN12MotoGameNode6onTickEv]+0x86): undefined reference to `SDLNet_UDP_Send'
+/usr/bin/ld: CMakeFiles/bike_game.dir/src/bike_game.cpp.o: in function `(anonymous namespace)::Net::poll((anonymous namespace)::NetState&)':
+bike_game.cpp:(.text._ZN12_GLOBAL__N_13Net4pollERNS_8NetStateE[_ZN12MotoGameNode6onTickEv]+0xa0): undefined reference to `SDLNet_UDP_Recv'
+/usr/bin/ld: CMakeFiles/bike_game.dir/src/bike_game.cpp.o: in function `(anonymous namespace)::Net::init()':
+bike_game.cpp:(.text._ZN12_GLOBAL__N_13Net4initEv[_ZN12MotoGameNodeC5Ev]+0xd): undefined reference to `SDLNet_Init'
+/usr/bin/ld: bike_game.cpp:(.text._ZN12_GLOBAL__N_13Net4initEv[_ZN12MotoGameNodeC5Ev]+0x2f): undefined reference to `SDLNet_AllocPacket'
+/usr/bin/ld: bike_game.cpp:(.text._ZN12_GLOBAL__N_13Net4initEv[_ZN12MotoGameNodeC5Ev]+0x41): undefined reference to `SDLNet_AllocPacket'
+/usr/bin/ld: CMakeFiles/bike_game.dir/src/bike_game.cpp.o: in function `(anonymous namespace)::Game::enableNetwork(bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, int)':
+bike_game.cpp:(.text._ZN12_GLOBAL__N_14Game13enableNetworkEbRKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEi[_ZN12MotoGameNodeC5Ev]+0x82): undefined reference to `SDLNet_GetError'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/bike_game.dir/build.make:180: bike_game] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/bike_game.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

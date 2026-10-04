@@ -100,6 +100,8 @@ bike_game: /home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_
 bike_game: /home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
 bike_game: /home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
 bike_game: /home/cuellarmaster/ros2_jazzy/install/geometry_msgs/lib/libgeometry_msgs__rosidl_generator_py.so
+bike_game: /usr/lib/x86_64-linux-gnu/libSDL2_net.so
+bike_game: /usr/lib/x86_64-linux-gnu/libSDL2.so
 bike_game: /home/cuellarmaster/ros2_jazzy/install/libstatistics_collector/lib/liblibstatistics_collector.so
 bike_game: /home/cuellarmaster/ros2_jazzy/install/rcl/lib/librcl.so
 bike_game: /home/cuellarmaster/ros2_jazzy/install/rmw_implementation/lib/librmw_implementation.so

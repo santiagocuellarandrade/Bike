@@ -7,33 +7,65 @@
 //  empieza a programar. Casi cada linea importante tiene su explicacion.
 //
 //  NOVEDADES DE ESTA VERSION:
+//    * VILLANOS CON M60: Pablo Escobar, Gengis Kan y Hitler ahora tienen una
+//      ametralladora M60. Se paran a cierta distancia y te disparan RAFAGAS de
+//      balas (con punteria imperfecta). Messi sigue pateando balones.
+//    * MODO ONLINE PARA 2 JUGADORES (UDP con SDL2_net): otra persona juega en
+//      tiempo real con una moto IGUAL a la tuya y los mismos controles.
+//      Uno ejecuta "host" y el otro "join IP".
 //    * CHOQUE REALISTA: cuando MUERES (te matan o te caes) hay un instante de
 //      camara lenta. El piloto sale disparado con la velocidad que llevabas
 //      (inercia), da vueltas, rebota, se arrastra por el suelo con el cuerpo
 //      flojo (ragdoll) y dice "AH GONORREA!". La moto se vuelca, rueda y se
 //      arrastra sacando chispas. La camara sigue al piloto.
-//    * MESSI ahora ATACA: se para a cierta distancia y te PATEA BALONES DE
+//    * MESSI ATACA: se para a cierta distancia y te PATEA BALONES DE
 //      FUTBOL. Los balones vuelan en arco, rebotan en el suelo y te hacen dano
 //      si te tocan. Puedes DESTRUIRLOS A BALAZOS (+5 puntos). Messi TAMBIEN
 //      se puede matar a balazos (3 disparos) o atropellandolo.
-//    * El monstruo GRANDE (antes "bruto") ahora es "ESTRELLA POP": un cantante
+//    * El monstruo GRANDE (antes "bruto") es "ESTRELLA POP": un cantante
 //      pop ficticio con chamarra brillante y microfono.
 //
 //  ----------------------------------------------------------------------------
 //  COMO COMPILAR
 //  ----------------------------------------------------------------------------
-//  A) SIN ROS (lo mas facil, solo necesitas SDL2):
+//  A) SIN ROS (lo mas facil, solo necesitas SDL2 y SDL2_net):
 //
-//       sudo apt install g++ libsdl2-dev
-//       g++ -std=c++17 -O2 -DNO_ROS moto_game.cpp -o moto_game $(sdl2-config --cflags --libs)
+//       sudo apt install g++ libsdl2-dev libsdl2-net-dev
+//       g++ -std=c++17 -O2 -DNO_ROS moto_game.cpp -o moto_game $(sdl2-config --cflags --libs) -lSDL2_net
 //       ./moto_game
 //
 //  B) CON ROS 2 (como tu bike_game.cpp original):
 //     Usa tu mismo CMakeLists.txt, solo cambia el nombre del archivo fuente
 //     (o guarda este archivo con el nombre bike_game.cpp). No pongas -DNO_ROS.
+//     IMPORTANTE: en tu CMakeLists.txt tambien debes enlazar SDL2_net, por ejemplo:
+//         target_link_libraries(bike_game SDL2_net)      (o ${SDL2_NET_LIBRARIES})
+//     Para jugar online con ROS usa variables de entorno:
+//         MOTO_NET=host ros2 run <paquete> bike_game
+//         MOTO_NET=join MOTO_IP=192.168.1.20 ros2 run <paquete> bike_game
+//         (opcional: MOTO_PORT=7777)
 //
 //  Se necesita SDL2 version 2.0.18 o mas nueva (para dibujar poligonos con
 //  degradados). Ubuntu 22.04 y 24.04 ya la traen.
+//
+//  ----------------------------------------------------------------------------
+//  COMO JUGAR ONLINE (version SIN ROS)
+//  ----------------------------------------------------------------------------
+//    Jugador 1:  ./moto_game host [puerto]
+//    Jugador 2:  ./moto_game join IP_DEL_JUGADOR_1 [puerto]
+//    (puerto por defecto: 7777, protocolo UDP)
+//
+//    * En la misma red local usa la IP local del host (hostname -I).
+//    * Por internet: lo mas facil es instalar Tailscale o ZeroTier en los dos
+//      PCs y usar la IP que te dan. O abre/redirige el puerto UDP 7777 en el
+//      router del host y usa su IP publica.
+//    * Revisa que el firewall deje pasar UDP 7777.
+//    * Para probar en tu propia PC: dos terminales (host y join 127.0.0.1).
+//      Ojo: las dos ventanas leen el teclado y el mouse a la vez, asi que usa
+//      el control de Xbox en una de ellas.
+//
+//    LIMITACION: cada PC tiene sus propios monstruos. Se ven y se disparan en
+//    tiempo real, pero matar un monstruo solo cuenta en tu PC. El siguiente
+//    paso seria que el host controle los monstruos y los envie al cliente.
 //
 //  ----------------------------------------------------------------------------
 //  CONTROLES
@@ -64,6 +96,8 @@
 //   * Si la cabeza o la cadera del piloto tocan el suelo, te caes.
 //   * Hay 3 tipos de monstruos: PERSONAJES (caminan: Pablo Escobar, Gengis Kan,
 //     Hitler y Messi), MURCIELAGO (vuela) y ESTRELLA POP (grande).
+//   * ESCOBAR, GENGIS KAN y HITLER te disparan con una M60 en rafagas de 8
+//     balas. Matalos antes de que se paren a tiro, o esquiva las rafagas.
 //   * MESSI te lanza balones de futbol. Esquivalos, destruyelos disparandoles,
 //     o mata a Messi a balazos (3 disparos) para que deje de patear.
 //   * Si vas muy rapido puedes ATROPELLAR a un personaje sin recibir dano
@@ -90,6 +124,7 @@
 //    5. Track: el terreno, las rampas y la decoracion
 //    6. Moto: la fisica de la moto XYZ 250
 //    7. Piloto, monstruos, balas, balones, pickups y particulas (estructuras de datos)
+//    7b. Net: comunicacion UDP entre dos jugadores
 //    8. Game: la logica del juego + todo el dibujado
 //    9. (opcional) Nodo de ROS 2 y funcion main
 //
@@ -108,6 +143,7 @@
 
 
 #include <SDL2/SDL.h>
+#include <SDL2/SDL_net.h>   // red UDP (paquete libsdl2-net-dev)
 
 #include <algorithm>   // std::min, std::max, std::clamp, std::remove_if
 #include <cctype>      // std::toupper
@@ -115,10 +151,13 @@
 #include <cmath>       // sin, cos, sqrt, atan2...
 #include <cstdint>     // tipos como uint8_t
 #include <cstdio>      // snprintf
+#include <cstdlib>     // std::atoi, getenv
+#include <cstring>     // std::memcpy
 #include <memory>      // std::make_shared
 #include <random>      // numeros aleatorios
 #include <stdexcept>   // std::runtime_error
 #include <string>
+#include <utility>     // std::swap
 #include <vector>
 
 // Si NO compilas con -DNO_ROS, se incluye ROS 2.
@@ -185,6 +224,15 @@ constexpr double BALL_GRAVITY = 900.0;    // que tan rapido cae el balon (mas ba
 constexpr double MESSI_KICK_RANGE = 750.0;   // Messi solo patea si estas a menos de esta distancia
 constexpr double MESSI_STAND_DIST = 320.0;   // Messi se acerca hasta esta distancia y se queda parado
 constexpr double MESSI_KICK_DELAY = 1.6;     // segundos minimos entre patadas (se le suma un poco al azar)
+
+// ----- M60 de los villanos -----
+constexpr double DAMAGE_M60 = 3.0;           // dano por bala
+constexpr double ENEMY_BULLET_SPEED = 900.0; // velocidad de la bala enemiga
+constexpr int    M60_BURST = 8;              // balas por rafaga
+constexpr double M60_SHOT_DELAY = 0.08;      // segundos entre balas de la rafaga
+constexpr double M60_BURST_PAUSE = 1.6;      // pausa entre rafagas
+constexpr double ARMED_STAND_DIST = 420.0;   // se queda parado a esta distancia
+constexpr double ARMED_FIRE_RANGE = 800.0;   // solo dispara si estas mas cerca
 
 constexpr size_t MAX_FX = 1600;           // maximo de particulas a la vez
 
@@ -949,12 +997,18 @@ struct Monster
   int spawnId{0};
   double kickT{0.0};      // (Messi) tiempo restante de la animacion de patada
   double kickCd{1.0};     // (Messi) cuenta regresiva para la proxima patada
+  Vec2 aim{-1.0, 0.0};    // (M60) hacia donde apunta el arma
+  int burstLeft{0};       // (M60) balas que faltan de la rafaga
+  double burstT{0.0};     // (M60) tiempo para la proxima bala
+  double fireCd{1.5};     // (M60) cuenta regresiva para la proxima rafaga
+  double flash{0.0};      // (M60) destello del cañon
 };
 
 struct Bullet
 {
   Vec2 p, v;
   double life{1.0};       // segundos que le quedan de vida
+  bool visual{false};     // true = bala "decorativa" del otro jugador (no hace dano en esta PC)
 };
 
 // Balon de futbol que patea Messi. Vuela en arco (le afecta la gravedad) y rebota.
@@ -1018,6 +1072,92 @@ Vec2 monsterCenter(const Monster & m)    // centro del cuerpo (donde pegan las b
 }
 // true si el monstruo es Messi (el unico que patea balones).
 inline bool isMessi(const Monster & m) {return m.type == MonsterType::ZOMBI && m.variant == 3;}
+// true si el monstruo es un villano armado con M60 (Escobar, Gengis Kan, Hitler).
+inline bool isArmed(const Monster & m) {return m.type == MonsterType::ZOMBI && m.variant <= 2;}
+// Posicion de la mano con la que el villano sostiene la M60.
+inline Vec2 monsterHand(const Monster & m) {return {m.p.x + 18.0 * m.facing, m.p.y - 40.0};}
+
+// ---------------------------------------------------------------------------
+// 7b. Net: COMUNICACION UDP ENTRE DOS JUGADORES
+// ---------------------------------------------------------------------------
+// Cada jugador simula SU moto en SU PC y le manda al otro, cada cuadro, lo
+// minimo para dibujarla: posicion de las ruedas, hacia donde apunta, si
+// dispara y si murio. UDP es rapido (no espera confirmaciones); si un paquete
+// se pierde, el siguiente lo reemplaza.
+
+// Lo que enviamos al otro jugador en cada cuadro.
+struct NetState
+{
+  uint32_t magic;
+  uint32_t seq;                 // numero de paquete (para ignorar los viejos)
+  float rx, ry, fx, fy;         // rueda trasera y delantera
+  float spinR, spinF;           // giro de las ruedas
+  float aimX, aimY;             // direccion del arma
+  int16_t health;
+  uint8_t fire, dead;
+};
+constexpr uint32_t NET_MAGIC = 0x4D4F544F;
+
+// Comunicacion UDP minima entre dos jugadores.
+class Net
+{
+public:
+  ~Net()
+  {
+    if (in_) {SDLNet_FreePacket(in_);}
+    if (out_) {SDLNet_FreePacket(out_);}
+    if (sock_) {SDLNet_UDP_Close(sock_);}
+    if (inited_) {SDLNet_Quit();}
+  }
+  // HOST: abre el puerto y espera. Aprende la direccion del otro al recibir su primer paquete.
+  bool host(int port) {return init() && (sock_ = SDLNet_UDP_Open(static_cast<Uint16>(port))) != nullptr;}
+  // CLIENTE: abre un puerto cualquiera y apunta al host.
+  bool join(const std::string & ip, int port)
+  {
+    if (!init()) {return false;}
+    sock_ = SDLNet_UDP_Open(0);
+    if (!sock_) {return false;}
+    if (SDLNet_ResolveHost(&peer_, ip.c_str(), static_cast<Uint16>(port)) != 0) {return false;}
+    havePeer_ = true;
+    return true;
+  }
+  void send(const NetState & s)
+  {
+    if (!sock_ || !havePeer_) {return;}
+    out_->address = peer_;
+    std::memcpy(out_->data, &s, sizeof s);
+    out_->len = sizeof s;
+    SDLNet_UDP_Send(sock_, -1, out_);
+  }
+  // Devuelve true si llego un paquete valido (llamalo en bucle hasta que de false).
+  bool poll(NetState & s)
+  {
+    if (!sock_) {return false;}
+    while (SDLNet_UDP_Recv(sock_, in_) == 1) {
+      if (in_->len != sizeof(NetState)) {continue;}
+      if (!havePeer_) {peer_ = in_->address; havePeer_ = true;}
+      std::memcpy(&s, in_->data, sizeof s);
+      return true;
+    }
+    return false;
+  }
+
+private:
+  bool init()
+  {
+    if (SDLNet_Init() != 0) {return false;}
+    inited_ = true;
+    in_ = SDLNet_AllocPacket(128);
+    out_ = SDLNet_AllocPacket(128);
+    return in_ && out_;
+  }
+  UDPsocket sock_{nullptr};
+  UDPpacket * in_{nullptr};
+  UDPpacket * out_{nullptr};
+  IPaddress peer_{};
+  bool havePeer_{false};
+  bool inited_{false};
+};
 
 // ---------------------------------------------------------------------------
 // 8. Game: LOGICA DEL JUEGO Y DIBUJADO
@@ -1066,6 +1206,7 @@ public:
     if (!handleEvents()) {return false;}
     readInput();
     update();
+    netExchange();      // enviar mi estado y recibir el del otro jugador
     render();
     return true;
   }
@@ -1081,6 +1222,15 @@ public:
   {
     remote_fire_ = fire;
     last_fire_cmd_ = std::chrono::steady_clock::now();
+  }
+
+  // ----- Modo online (2 jugadores) -----
+  // host = true: espera al otro jugador en 'port'.  host = false: se conecta a 'ip':'port'.
+  bool enableNetwork(bool host, const std::string & ip, int port)
+  {
+    netOn_ = host ? net_.host(port) : net_.join(ip, port);
+    if (!netOn_) {std::fprintf(stderr, "Error de red: %s\n", SDLNet_GetError());}
+    return netOn_;
   }
 
   // ----- Datos para publicar en ROS -----
@@ -1169,6 +1319,8 @@ private:
     moto_.reset(track_, x0);
     bullets_.clear();
     balls_.clear();                    // quitar los balones que estaban volando
+    enemyBullets_.clear();             // quitar las balas de las M60
+    spawnGrace_ = 1.5;                 // un momento de inmunidad a balas al reaparecer
     fx_.clear();
     monsters_.clear();
     for (size_t i = 0; i < spawns_.size(); ++i) {
@@ -1203,6 +1355,7 @@ private:
         // Elige el personaje segun el spawn (siempre el mismo en cada partida).
         m.variant = std::min(3, static_cast<int>(hash01(spawnId * 53 + 7) * 4.0));
         m.kickCd = 0.8 + 0.8 * r;      // Messi: primera patada poco despues de despertar
+        m.fireCd = 1.0 + 1.5 * r;      // villanos con M60: primera rafaga poco despues de despertar
         break;
       case MonsterType::MURCIELAGO:
         m.hp = m.maxHp = 2.0;
@@ -1529,6 +1682,7 @@ private:
     }
     time_ += DT;
     invuln_ = std::max(0.0, invuln_ - DT);
+    spawnGrace_ = std::max(0.0, spawnGrace_ - DT);
     hurt_flash_ = std::max(0.0, hurt_flash_ - DT);
     muzzle_t_ = std::max(0.0, muzzle_t_ - DT);
     fire_cd_ = std::max(0.0, fire_cd_ - DT);
@@ -1549,6 +1703,7 @@ private:
       updateBullets();
       updateMonsters();
       updateBalls();
+      updateEnemyBullets();
       collectPickups();
       updateCheckpoints();
       checkEnd();
@@ -1653,6 +1808,7 @@ private:
         b.life = 0.0;
         continue;
       }
+      if (b.visual) {continue;}   // las balas del otro jugador no danan en esta PC
       // Choca con un BALON de Messi? Lo destruimos (+5 puntos).
       bool hitBall = false;
       for (Ball & ba : balls_) {
@@ -1763,6 +1919,57 @@ private:
     emit(start, 6, -PI / 2.0, 1.0, 120.0, rgb(150, 115, 80, 190), 0.5, 4.0, 60.0, 1.5, true);
   }
 
+  // ----- Un disparo de la M60 de un villano -----
+  // Apunta a donde ESTARA la moto (un poco de "adelanto") y le suma dispersion,
+  // asi que a veces falla. Entre mas rapido vayas, mas dificil es que te acierte.
+  void enemyShoot(Monster & m)
+  {
+    const Vec2 muzzle = monsterHand(m) + m.aim * 54.0;
+    const Vec2 tgt = moto_.mid();
+    const double flight = len(tgt - muzzle) / ENEMY_BULLET_SPEED;
+    const Vec2 lead = tgt + moto_.velocity() * (flight * 0.6);
+    const Vec2 dir = rotated(normalized(lead - muzzle), rnd(-0.07, 0.07));
+    Bullet b;
+    b.p = muzzle;
+    b.v = dir * ENEMY_BULLET_SPEED;
+    b.life = 1.4;
+    enemyBullets_.push_back(b);
+    emit(muzzle, 2, std::atan2(dir.y, dir.x), 0.4, 200.0, rgb(255, 210, 100), 0.15, 2.0, 0.0);
+  }
+
+  // Dano de bala: no usa la inmunidad larga de los golpes cuerpo a cuerpo
+  // (asi una rafaga completa si te puede hacer dano).
+  void hurtByBullet(double dmg, Vec2 from)
+  {
+    if (spawnGrace_ > 0.0) {return;}
+    health_ -= dmg;
+    hurt_flash_ = std::max(hurt_flash_, 0.12);
+    shake_ = std::max(shake_, 3.0);
+    moto_.addVelocity({normalized(moto_.mid() - from).x * 25.0, 0.0});
+    emit(moto_.mid(), 4, 0.0, PI, 200.0, rgb(190, 25, 25), 0.5, 3.0, 600.0);
+  }
+
+  // Mueve las balas de las M60: vuelan en linea recta, se estrellan en el suelo o te pegan.
+  void updateEnemyBullets()
+  {
+    for (Bullet & b : enemyBullets_) {
+      b.p += b.v * DT;
+      b.life -= DT;
+      if (b.p.y > track_.at(b.p.x)) {
+        emit(b.p, 4, -PI / 2.0, 1.4, 160.0, rgb(255, 200, 90), 0.3, 2.0, 400.0);
+        b.life = 0.0;
+        continue;
+      }
+      if (touchesPlayer(b.p, 4.0)) {
+        hurtByBullet(DAMAGE_M60, b.p);
+        b.life = 0.0;
+      }
+    }
+    enemyBullets_.erase(
+      std::remove_if(enemyBullets_.begin(), enemyBullets_.end(), [](const Bullet & b) {return b.life <= 0.0;}),
+      enemyBullets_.end());
+  }
+
   // Mueve los balones: gravedad, rebote en el suelo y choque con el jugador.
   void updateBalls()
   {
@@ -1804,6 +2011,7 @@ private:
       if (!m.alive) {continue;}
       m.hurt = std::max(0.0, m.hurt - DT);
       m.kickT = std::max(0.0, m.kickT - DT);
+      m.flash = std::max(0.0, m.flash - DT);
 
       // Dormido: se despierta cuando la moto se acerca.
       if (!m.active) {
@@ -1834,6 +2042,29 @@ private:
         if (m.kickCd <= 0.0 && dist < MESSI_KICK_RANGE) {
           messiKick(m);
           m.kickCd = MESSI_KICK_DELAY + rnd(0.0, 0.9);      // espera antes de la siguiente
+        }
+      } else if (isArmed(m)) {
+        // VILLANO CON M60: se acerca, se para y dispara rafagas.
+        const double dist = std::fabs(target.x - m.p.x);
+        if (dist > ARMED_STAND_DIST) {
+          m.anim += DT * m.speed * 0.12;
+          m.p.x += dir * m.speed * DT;
+        }
+        m.p.y = track_.at(m.p.x);
+        m.aim = normalized(target - monsterHand(m));
+        m.fireCd -= DT;
+        if (m.burstLeft > 0) {
+          m.burstT -= DT;
+          if (m.burstT <= 0.0) {
+            enemyShoot(m);
+            m.flash = 0.05;
+            --m.burstLeft;
+            m.burstT = M60_SHOT_DELAY;
+          }
+        } else if (m.fireCd <= 0.0 && dist < ARMED_FIRE_RANGE) {
+          m.burstLeft = M60_BURST;
+          m.burstT = 0.0;
+          m.fireCd = M60_BURST_PAUSE + rnd(0.0, 1.0);
         }
       } else {
         // Camina por el suelo hacia ti, pegado al terreno.
@@ -1944,6 +2175,55 @@ private:
     }
   }
 
+  // ======================= MODO ONLINE ================================
+  // Cada cuadro: 1) mandamos NUESTRO estado, 2) leemos lo que haya llegado del
+  // otro jugador y actualizamos su moto "fantasma" (remote_). Esa moto solo se
+  // DIBUJA (con el mismo drawMoto() que la tuya): su fisica la corre su PC.
+  void netExchange()
+  {
+    if (!netOn_) {return;}
+    NetState s{};
+    s.magic = NET_MAGIC;
+    s.seq = ++netSeq_;
+    s.rx = static_cast<float>(moto_.rear.p.x);  s.ry = static_cast<float>(moto_.rear.p.y);
+    s.fx = static_cast<float>(moto_.front.p.x); s.fy = static_cast<float>(moto_.front.p.y);
+    s.spinR = static_cast<float>(moto_.spin_r); s.spinF = static_cast<float>(moto_.spin_f);
+    s.aimX = static_cast<float>(aim_.x);        s.aimY = static_cast<float>(aim_.y);
+    s.health = static_cast<int16_t>(health());
+    s.dead = state_ == State::CRASHED;
+    s.fire = in_.fire && ammo_ > 0 && state_ == State::RUNNING;
+    net_.send(s);
+
+    const auto now = std::chrono::steady_clock::now();
+    NetState r;
+    while (net_.poll(r)) {
+      // Ignoramos paquetes ajenos y paquetes viejos (seq menor o igual al ultimo).
+      if (r.magic != NET_MAGIC || static_cast<int32_t>(r.seq - remote_.lastSeq) <= 0) {continue;}
+      remote_.lastSeq = r.seq;
+      remote_.moto.rear.p = {r.rx, r.ry};   remote_.moto.rear.prev = remote_.moto.rear.p;
+      remote_.moto.front.p = {r.fx, r.fy};  remote_.moto.front.prev = remote_.moto.front.p;
+      remote_.moto.spin_r = r.spinR;
+      remote_.moto.spin_f = r.spinF;
+      remote_.aim = normalized({r.aimX, r.aimY});
+      remote_.dead = r.dead != 0;
+      remote_.health = r.health;
+      remote_.active = true;
+      remote_.last = now;
+      if (r.fire) {   // bala solo visual: sale del arma del otro jugador
+        remote_.pose = makePose(remote_.moto, remote_.aim);
+        Bullet b;
+        b.p = remote_.pose.gunTip;
+        b.v = remote_.aim * BULLET_SPEED + remote_.moto.velocity();
+        b.life = 1.2;
+        b.visual = true;
+        bullets_.push_back(b);
+        emit(b.p, 2, std::atan2(remote_.aim.y, remote_.aim.x), 0.4, 300.0, rgb(255, 210, 100), 0.2, 2.0, 0.0);
+      }
+    }
+    // Si hace 2 segundos que no llega nada, el otro jugador se desconecto.
+    if (remote_.active && now - remote_.last > std::chrono::seconds(2)) {remote_.active = false;}
+  }
+
   void updateCamera()
   {
     // Al chocar, la camara sigue al piloto (que es lo que sale volando).
@@ -1963,8 +2243,8 @@ private:
   // ======================= DIBUJAR ====================================
   // Orden de dibujado (lo que se dibuja primero queda ATRAS):
   //   cielo -> sol -> nubes -> edificios lejanos -> terreno -> decoracion ->
-  //   pickups -> monstruos -> balones -> moto y piloto -> balas -> particulas ->
-  //   cenizas -> vineta -> HUD (vida, balas, puntos...)
+  //   pickups -> monstruos -> balones -> moto y piloto (y la del otro jugador) ->
+  //   balas -> particulas -> cenizas -> vineta -> HUD (vida, balas, puntos...)
 
   void render()
   {
@@ -1981,6 +2261,7 @@ private:
     drawBalls();
     drawHeadlight();
     drawMoto();
+    drawRemoteMoto();
     drawBulletsAndFx();
     drawDeathSpeech();
 
@@ -2324,8 +2605,14 @@ private:
       gfx_.line(L(4, 40 + bob), L(22, 52 + armWave * 3.0 + 6.0), 5.5 * s * th, mix(skin, rgb(0, 0, 0), 0.25), true);
       gfx_.line(L(16, 52 + bob), L(20, 55 + bob), 2.0 * s, rgb(70, 70, 76), true);   // mango del microfono
       gfx_.circle(L(21, 57 + bob), 3.2 * s, rgb(190, 190, 200), 10);                 // cabeza del microfono
+    } else if (vr <= 2) {
+      // Villano armado: sostiene la M60 apuntando hacia ti.
+      const Vec2 hand = monsterHand(m);
+      gfx_.line(L(4, 42 + bob), hand, 5.5 * s, skin, true);
+      drawM60(hand, m.aim, m.flash > 0.0);
+      gfx_.line(L(4, 40 + bob), hand + m.aim * 22.0, 5.5 * s, mix(skin, rgb(0, 0, 0), 0.25), true);
     } else {
-      // brazos estirados hacia adelante
+      // (Messi) brazos estirados hacia adelante
       gfx_.line(L(4, 42 + bob), L(26, 41 + armWave), 5.5 * s * th, skin, true);
       gfx_.line(L(4, 40 + bob), L(23, 33 - armWave), 5.5 * s * th, mix(skin, rgb(0, 0, 0), 0.25), true);
     }
@@ -2520,6 +2807,26 @@ private:
     gfx_.circle(G(19, 5.2), 1.8, rgb(90, 190, 255), 8);                                        // lente azul
   }
 
+  // M60 de los villanos: culata, receptor, caja de municion con cinta, cañon con cubierta y bipode.
+  // 'base' = la mano que la sostiene, 'dir' = hacia donde apunta, 'flash' = destello al disparar.
+  void drawM60(Vec2 base, Vec2 dir, bool flash)
+  {
+    const double side = dir.x >= 0.0 ? 1.0 : -1.0;
+    const Vec2 up{dir.y * side, -dir.x * side};
+    auto G = [&](double f, double h) {return base + dir * f + up * h;};
+    gfx_.polygon({G(-28, -5), G(-10, -3), G(-10, 5), G(-28, 2)}, rgb(100, 64, 38));      // culata
+    gfx_.polygon({G(-10, -5), G(22, -5), G(22, 6), G(-10, 6)}, rgb(40, 42, 46));         // receptor
+    gfx_.polygon({G(0, -5), G(14, -5), G(14, -17), G(0, -17)}, rgb(70, 80, 50));         // caja de municion
+    gfx_.line(G(14, -9), G(22, -2), 2.5, rgb(205, 170, 60));                              // cinta de balas
+    gfx_.polygon({G(22, -1.5), G(58, -1.5), G(58, 1.5), G(22, 1.5)}, rgb(22, 22, 26));   // cañon
+    gfx_.polygon({G(24, -3.5), G(42, -3.5), G(42, 4), G(24, 4)}, rgb(55, 57, 62));       // cubierta del cañon
+    gfx_.line(G(40, 0), G(34, -13), 1.8, rgb(30, 30, 34));                                // bipode
+    gfx_.line(G(40, 0), G(47, -13), 1.8, rgb(30, 30, 34));
+    if (flash) {
+      gfx_.glow(G(60, 0), 26.0, rgb(255, 220, 120, 230), rgb(255, 150, 40, 0), 14);
+    }
+  }
+
   void drawMoto()
   {
     const Moto & m = moto_;
@@ -2591,6 +2898,31 @@ private:
     drawRiderUpper();
   }
 
+  // ---- La moto del OTRO jugador (modo online) ----
+  // Truco: intercambiamos temporalmente los datos de mi moto con los de la moto
+  // remota, llamamos al MISMO drawMoto() y los devolvemos. Asi la moto del otro
+  // jugador se ve identica a la tuya sin repetir ni una linea de dibujo.
+  void drawRemoteMoto()
+  {
+    if (!netOn_ || !remote_.active) {return;}
+    std::swap(moto_, remote_.moto);
+    std::swap(pose_, remote_.pose);
+    std::swap(aim_, remote_.aim);
+    const State savedState = state_;
+    const double savedBrake = in_.brake;
+    state_ = State::RUNNING;          // para que riderAxis() use la moto (no el ragdoll)
+    in_.brake = 0.0;                  // sin luz de freno
+    pose_ = makePose(moto_, aim_);
+    drawMoto();
+    state_ = savedState;
+    in_.brake = savedBrake;
+    std::swap(moto_, remote_.moto);
+    std::swap(pose_, remote_.pose);
+    std::swap(aim_, remote_.aim);
+    gfx_.textCentered(remote_.dead ? "JUGADOR 2 - CAIDO" : "JUGADOR 2", remote_.pose.head.x,
+      remote_.pose.head.y - 40.0, 2, rgb(120, 220, 255));
+  }
+
   // ---- Globo de dialogo del piloto al morir ----
   // Nuestra fuente no tiene acentos, asi que se escribe sin tilde. El caracter '#'
   // es el signo de apertura de exclamacion.
@@ -2616,6 +2948,13 @@ private:
   // ---- Balas, particulas y destello del disparo ----
   void drawBulletsAndFx()
   {
+    // Balas de las M60 de los villanos (rojizas).
+    for (const Bullet & b : enemyBullets_) {
+      const Vec2 tail = b.p - normalized(b.v) * 22.0;
+      gfx_.glow(b.p, 8.0, rgb(255, 80, 60, 150), rgb(255, 80, 60, 0), 10);
+      gfx_.line(tail, b.p, 2.6, rgb(255, 90, 60, 220));
+    }
+    // Balas del jugador (y las visuales del otro jugador).
     for (const Bullet & b : bullets_) {
       const Vec2 tail = b.p - normalized(b.v) * 26.0;
       gfx_.glow(b.p, 9.0, rgb(255, 220, 120, 150), rgb(255, 220, 120, 0), 10);
@@ -2742,6 +3081,12 @@ private:
       gfx_.rect(m.x - 1, m.y - 18, 2, 10, c);
       gfx_.rect(m.x - 1, m.y + 8, 2, 10, c);
     }
+
+    // Estado de la conexion online.
+    if (netOn_) {
+      gfx_.text(remote_.active ? "JUGADOR 2: CONECTADO" : "ESPERANDO JUGADOR 2...", 20, 90, 2,
+        remote_.active ? rgb(120, 255, 140) : rgb(255, 200, 80));
+    }
   }
 
   // ======================= VARIABLES DEL JUEGO =========================
@@ -2755,6 +3100,7 @@ private:
   Pose pose_;
   Vec2 aim_{1.0, 0.0};
   std::vector<Bullet> bullets_;
+  std::vector<Bullet> enemyBullets_;  // balas de las M60 de los villanos
   std::vector<Ball> balls_;           // balones que Messi patea
   std::vector<Monster> monsters_;
   std::vector<Spawn> spawns_;
@@ -2788,12 +3134,28 @@ private:
   int score_{0}, kills_{0};
   double checkpoint_x_{0.0};
   double invuln_{0.0}, hurt_flash_{0.0}, muzzle_t_{0.0}, fire_cd_{0.0};
+  double spawnGrace_{0.0};              // inmunidad a balas al reaparecer
   double banner_t_{0.0}, no_ammo_t_{0.0}, hint_time_{0.0};
   std::string banner_, death_msg_;
 
   double remote_throttle_{0.0}, remote_lean_{0.0};
   bool remote_fire_{false};
   std::chrono::steady_clock::time_point last_cmd_{}, last_fire_cmd_{};
+
+  // ----- Modo online -----
+  Net net_;
+  bool netOn_{false};
+  uint32_t netSeq_{0};
+  struct Remote                          // el "fantasma" del otro jugador
+  {
+    Moto moto;
+    Pose pose;
+    Vec2 aim{1.0, 0.0};
+    bool active{false}, dead{false};
+    int health{100};
+    uint32_t lastSeq{0};
+    std::chrono::steady_clock::time_point last{};
+  } remote_;
 };
 
 }  // namespace
@@ -2826,6 +3188,23 @@ public:
       });
 
     game_ = std::make_unique<Game>();
+
+    // Modo online por variables de entorno:
+    //   MOTO_NET=host                          -> espera al otro jugador
+    //   MOTO_NET=join MOTO_IP=192.168.1.20     -> se conecta al host
+    //   MOTO_PORT=7777 (opcional)
+    const char * netMode = std::getenv("MOTO_NET");
+    if (netMode) {
+      const char * portEnv = std::getenv("MOTO_PORT");
+      const int port = portEnv ? std::atoi(portEnv) : 7777;
+      const std::string mode = netMode;
+      if (mode == "host") {
+        game_->enableNetwork(true, "", port);
+      } else if (mode == "join") {
+        const char * ipEnv = std::getenv("MOTO_IP");
+        game_->enableNetwork(false, ipEnv ? ipEnv : "127.0.0.1", port);
+      }
+    }
 
     // Cada 1/60 de segundo se ejecuta un cuadro del juego.
     timer_ = create_wall_timer(std::chrono::microseconds(16667), [this]() {onTick();});
@@ -2888,10 +3267,16 @@ int main(int argc, char ** argv)
 
 #else   // ---------- version SIN ROS: solo SDL ----------
 
-int main()
+int main(int argc, char ** argv)
 {
   try {
     Game game;
+    // Uso:  ./moto_game host [puerto]     |     ./moto_game join IP [puerto]
+    if (argc >= 2 && std::string(argv[1]) == "host") {
+      game.enableNetwork(true, "", argc >= 3 ? std::atoi(argv[2]) : 7777);
+    } else if (argc >= 3 && std::string(argv[1]) == "join") {
+      game.enableNetwork(false, argv[2], argc >= 4 ? std::atoi(argv[3]) : 7777);
+    }
     // Bucle principal: repetir tick() ~60 veces por segundo hasta que devuelva false.
     while (true) {
       const Uint32 t0 = SDL_GetTicks();
